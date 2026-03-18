@@ -1,49 +1,50 @@
 const sections = document.querySelectorAll('.section');
-const sectBtns = document.querySelectorAll('.controlls');
-const sectBtn = document.querySelectorAll('.control');
+const sectBtn  = document.querySelectorAll('.control');
 const allSections = document.querySelector('.main-content');
 
+function PageTransition() {
 
-function PageTransition(){
-    //Button click active class
-    for(let i=0; i < sectBtn.length; i++){
-        sectBtn[i].addEventListener('click', function() {
-            let currentBtn = document.querySelectorAll('.active-btn');
-            currentBtn[0].className = currentBtn[0].className.replace('active-btn', '');
-            this.className += ' active-btn';
-        })
-    }
-    
-    //sections active class
-    allSections.addEventListener('click', (e) =>{
+    // ── Control button click: switch active section ──
+    sectBtn.forEach((btn) => {
+        btn.addEventListener('click', function () {
+            const id = this.dataset.id;
+            if (!id) return; // skip the game link button (no data-id nav)
+
+            // Update active button highlight
+            sectBtn.forEach(b => b.classList.remove('active-btn'));
+            this.classList.add('active-btn');
+
+            // Show the matching section, hide all others
+            sections.forEach(section => section.classList.remove('active'));
+            const target = document.getElementById(id);
+            if (target) target.classList.add('active');
+        });
+    });
+
+    // ── "Get in Touch" / inline buttons with data-id ──
+    // Allows any element with data-id inside the page to act as a nav link
+    allSections.addEventListener('click', (e) => {
         const id = e.target.dataset.id;
-        if(id){
-            //remove selected from the other btns
-            sectBtns.forEach((btn) =>{
-                btn.classList.remove('active')
-            })
-            e.target.classList.add('active')
+        if (!id) return;
 
-            //hide other section
-            sections.forEach((section)=>{
-                section.classList.remove('active')
-            })
+        // Update buttons
+        sectBtn.forEach(b => {
+            b.classList.toggle('active-btn', b.dataset.id === id);
+        });
 
-            const element = document.getElementById(id);
-            element.classList.add('active');
-        }
-    })
+        // Show section
+        sections.forEach(section => section.classList.remove('active'));
+        const target = document.getElementById(id);
+        if (target) target.classList.add('active');
+    });
 
-    //Toogle theme
-
+    // ── Theme toggle (uncomment .theme-btn in HTML to use) ──
     const themeBtn = document.querySelector('.theme-btn');
-    themeBtn.addEventListener('click', () => {
-        let element = document.body;
-        element.classList.toggle('light-mode');
-    })
-
+    if (themeBtn) {
+        themeBtn.addEventListener('click', () => {
+            document.body.classList.toggle('light-mode');
+        });
+    }
 }
 
 PageTransition();
-
-

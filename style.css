@@ -88,11 +88,10 @@ body::after {
   backdrop-filter: blur(20px);
   border-bottom: 1px solid rgba(255,255,255,0.04);
 }
-.nav-logo {
-  font-family: 'DM Serif Display', serif; font-size: 1.3rem;
-  letter-spacing: 0.02em;
-  background: linear-gradient(135deg, var(--violet-2), var(--rose));
-  -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;
+.nav-logo img {
+  height: 30px;        
+  width: auto;
+  object-fit: contain;
 }
 .nav-links { display: flex; gap: 0.2rem; }
 .nav-links .nav-btn {
@@ -572,6 +571,14 @@ body::after {
 }
 .ci-text-label { font-size: 0.65rem; text-transform: uppercase; letter-spacing: 0.1em; color: var(--muted); }
 .ci-text-val { font-size: 0.85rem; font-weight: 500; margin-top: 0.1rem; }
+.ci-text-val a {
+  color: var(--cream);        /* or any color you want */
+  text-decoration: none;      /* removes underline */
+  transition: var(--transition);
+}
+.ci-text-val a:hover {
+  color: var(--violet-2);     /* nice hover effect */
+}
 .social-links { display: flex; gap: 0.7rem; margin-top: 2rem; }
 .social-link {
   width: 42px; height: 42px; border-radius: 12px;

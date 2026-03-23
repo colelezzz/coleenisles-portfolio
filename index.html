@@ -1,693 +1,802 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Coleen Isles | Portfolio</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,300&display=swap" rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,300&display=swap"
+    rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
   <link rel="stylesheet" href="style.css">
   <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
 </head>
+
 <body>
 
-<canvas id="bg-canvas"></canvas>
-<canvas id="cursor-canvas"></canvas>
+  <canvas id="bg-canvas"></canvas>
+  <canvas id="cursor-canvas"></canvas>
 
-<!-- ── NAV ── -->
-<nav class="nav">
-  <div class="nav-logo">CI.</div>
-  <div class="nav-links">
-    <div class="nav-btn active-btn" data-id="home">Home</div>
-    <div class="nav-btn" data-id="about">About</div>
-    <div class="nav-btn" data-id="portfolio">Projects</div>
-    <div class="nav-btn" data-id="services">Skills</div>
+  <!-- ── NAV ── -->
+  <nav class="nav">
+    <div class="nav-logo">CI.</div>
+    <div class="nav-links">
+      <div class="nav-btn active-btn" data-id="home">Home</div>
+      <div class="nav-btn" data-id="about">About</div>
+      <div class="nav-btn" data-id="portfolio">Projects</div>
+      <div class="nav-btn" data-id="services">Skills</div>
+    </div>
+    <button class="nav-hire" data-id="contact">Contact Me</button>
+  </nav>
+
+  <!-- ── BOTTOM NAV (mobile) ── -->
+  <div class="bottom-nav" id="bottomNav">
+    <div class="bottom-nav-btn active-btn" data-id="home"><i class="fas fa-house"></i><span>Home</span></div>
+    <div class="bottom-nav-btn" data-id="about"><i class="fas fa-user"></i><span>About</span></div>
+    <div class="bottom-nav-btn" data-id="portfolio"><i class="fas fa-briefcase"></i><span>Projects</span></div>
+    <div class="bottom-nav-btn" data-id="services"><i class="fas fa-star"></i><span>Skills</span></div>
+    <div class="bottom-nav-btn" data-id="contact"><i class="fas fa-envelope"></i><span>Contact</span></div>
   </div>
-  <button class="nav-hire" data-id="contact">Contact Me</button>
-</nav>
 
-<!-- ── BOTTOM NAV (mobile) ── -->
-<div class="bottom-nav" id="bottomNav">
-  <div class="bottom-nav-btn active-btn" data-id="home"><i class="fas fa-house"></i><span>Home</span></div>
-  <div class="bottom-nav-btn" data-id="about"><i class="fas fa-user"></i><span>About</span></div>
-  <div class="bottom-nav-btn" data-id="portfolio"><i class="fas fa-briefcase"></i><span>Projects</span></div>
-  <div class="bottom-nav-btn" data-id="services"><i class="fas fa-star"></i><span>Skills</span></div>
-  <div class="bottom-nav-btn" data-id="contact"><i class="fas fa-envelope"></i><span>Contact</span></div>
-</div>
-
-<!-- ── HOME ── -->
-<div class="section active" id="home">
-  <div class="home-wrap">
-    <div class="home-left">
-      <div class="status-pill">
-        <span class="status-dot"></span>
-        Available for opportunities
-      </div>
-      <h1 class="home-name">
-        Hi, I'm<br>
-        <em>Marifiel Coleen</em>
-        L. Isles
-      </h1>
-      <p class="home-subtitle">Aspiring Project Manager &amp; Front-End Developer</p>
-      <p class="home-desc">
-        A 4th-year Bacgelor of Science in Information Technology student at PUP Sto. Tomas Campus — driven by a passion for leading teams, shipping well-crafted interfaces, and bridging the gap between people and technology.
-      </p>
-      <div class="home-actions">
-        <a href="cv/coleen-isles-cv.pdf" download class="btn-primary">
-          <i class="fas fa-file-arrow-down"></i> Download My CV
-        </a>
-      </div>
-      <div class="home-stats">
-        <div class="home-stat-pill">
-          <span class="hsp-icon"><i class="fas fa-diagram-project"></i></span>
-          <span class="hsp-text">Project Manager</span>
+  <!-- ── HOME ── -->
+  <div class="section active" id="home">
+    <div class="home-wrap">
+      <div class="home-left">
+        <div class="status-pill">
+          <span class="status-dot"></span>
+          Available for opportunities
         </div>
-        <div class="home-stat-pill">
-          <span class="hsp-icon"><i class="fas fa-code"></i></span>
-          <span class="hsp-text">Front-End Dev</span>
+        <h1 class="home-name">
+          Hi, I'm<br>
+          <em>Marifiel Coleen</em>
+          L. Isles
+        </h1>
+        <p class="home-subtitle">Aspiring Project Manager &amp; Front-End Developer</p>
+        <p class="home-desc">
+          A 4th-year Bachelor of Science in Information Technology student at PUP Sto. Tomas Campus — driven by a
+          passion for leading teams, shipping well-crafted interfaces, and bridging the gap between people and
+          technology.
+        </p>
+        <div class="home-actions">
+          <a href="cv/coleen-isles-cv.pdf" download class="btn-primary">
+            <i class="fas fa-file-arrow-down"></i> Download My CV
+          </a>
         </div>
-        <div class="home-stat-pill">
-          <span class="hsp-icon"><i class="fas fa-graduation-cap"></i></span>
-          <span class="hsp-text">PUP STC — 2026</span>
-        </div>
-      </div>
-    </div>
-
-    <div class="home-right">
-      <div class="img-frame">
-        <div class="img-grid"></div>
-        <svg class="img-geo-svg" viewBox="0 0 424 524" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <path class="geo-path-1" d="M 30 0 L 394 0 L 424 30 L 424 494 L 394 524 L 30 524 L 0 494 L 0 30 Z" stroke="rgba(124,58,237,0.4)" stroke-width="1" fill="none"/>
-          <path class="geo-path-2" d="M 40 10 L 384 10 L 414 40 L 414 484 L 384 514 L 40 514 L 10 484 L 10 40 Z" stroke="rgba(167,139,250,0.18)" stroke-width="0.8" fill="none"/>
-          <path class="geo-path-3" d="M 80 0 L 60 20 M 344 0 L 364 20 M 80 524 L 60 504 M 344 524 L 364 504" stroke="rgba(244,114,182,0.5)" stroke-width="1.5" fill="none" stroke-linecap="round"/>
-        </svg>
-        <div class="img-corner tl"></div>
-        <div class="img-corner tr"></div>
-        <div class="img-corner bl"></div>
-        <div class="img-corner br"></div>
-        <div class="img-frame-inner">
-          <img src="assets/image1.png" alt="Marifiel Coleen L. Isles">
-        </div>
-        <div class="img-label">Project&nbsp;Manager&nbsp;&middot;&nbsp;Front-End&nbsp;Dev&nbsp;&middot;&nbsp;PUP&nbsp;STC</div>
-      </div>
-    </div>
-  </div>
-</div>
-
-<!-- ── ABOUT ── -->
-<div class="section" id="about">
-  <div class="sec-wrap">
-
-    <!-- NEW EYEBROW TREATMENT -->
-    <div class="sec-title">
-      <div class="eyebrow-bar">
-        <div class="eyebrow-tick"></div>
-        <span class="eyebrow-num-label">01</span>
-        <div class="eyebrow-line"></div>
-        <span class="eyebrow-tag">Who Am I</span>
-      </div>
-      <h2>About <em>Me</em></h2>
-    </div>
-
-    <div class="about-grid">
-      <div class="about-text">
-        <p>My name is <strong style="color:var(--cream)">Marifiel Coleen L. Isles</strong>. I'm in my final-year of being an IT student at the Polytechnic University of the Philippines - STo. Tomas Campus, with a clear focus on two paths: <strong style="color:var(--violet-2)">Project Management</strong> and <strong style="color:var(--violet-2)">Front-End Development</strong>.</p>
-        <p>I love organizing complexity — breaking down big goals into clear sprints, keeping teams aligned, and making sure projects actually ship. At the same time, I care deeply about the craft of building interfaces that are not just functional, but genuinely enjoyable to use.</p>
-        <p>Whether I'm leading a team standup or pushing pixels in Figma, I bring structure, ownership, and a sharp eye for detail to everything I do.</p>
-        <div class="tech-tags">
-          <span class="tech-tag">Agile / Scrum</span>
-          <span class="tech-tag">Jira</span>
-          <span class="tech-tag">Figma</span>
-          <span class="tech-tag">HTML &amp; CSS</span>
-          <span class="tech-tag">JavaScript</span>
-          <span class="tech-tag">React</span>
-          <span class="tech-tag">Git</span>
-          <span class="tech-tag">Risk Management</span>
+        <div class="home-stats">
+          <div class="home-stat-pill">
+            <span class="hsp-icon"><i class="fas fa-diagram-project"></i></span>
+            <span class="hsp-text">Project Manager</span>
+          </div>
+          <div class="home-stat-pill">
+            <span class="hsp-icon"><i class="fas fa-code"></i></span>
+            <span class="hsp-text">Front-End Dev</span>
+          </div>
+          <div class="home-stat-pill">
+            <span class="hsp-icon"><i class="fas fa-graduation-cap"></i></span>
+            <span class="hsp-text">PUP STC — 2026</span>
+          </div>
         </div>
       </div>
 
-      <div class="about-cards">
-        <div class="about-card">
-          <div class="about-card-icon"><i class="fas fa-people-group"></i></div>
-          <div class="about-card-num">Team<br>First</div>
-          <div class="about-card-label">I lead with empathy — aligning people before aligning timelines.</div>
-        </div>
-        <div class="about-card">
-          <div class="about-card-icon"><i class="fas fa-pen-to-square"></i></div>
-          <div class="about-card-num">Detail<br>Driven</div>
-          <div class="about-card-label">From sprint docs to pixel spacing — precision in everything.</div>
-        </div>
-        <div class="about-card">
-          <div class="about-card-icon"><i class="fas fa-seedling"></i></div>
-          <div class="about-card-num">Always<br>Learning</div>
-          <div class="about-card-label">Scrum, new frameworks, design trends — curiosity never stops.</div>
-        </div>
-        <div class="about-card">
-          <div class="about-card-icon"><i class="fas fa-link"></i></div>
-          <div class="about-card-num">The<br>Bridge</div>
-          <div class="about-card-label">Fluent in both dev and PM — I connect teams and products.</div>
-        </div>
-      </div>
-    </div>
-
-    <!-- HOBBIES & INTERESTS -->
-    <div class="hobbies-section">
-      <div class="skills-inner-title">
-        <span class="skills-inner-label">Beyond the Keyboard</span>
-        <div class="skills-inner-line"></div>
-      </div>
-      <div class="hobbies-grid">
-        <div class="hobby-card">
-          <div class="hobby-emoji">🎨</div>
-          <div class="hobby-name">Digital Art</div>
-          <div class="hobby-desc">Drawing characters and UI concepts in Procreate and Figma — art informs how I think about design.</div>
-        </div>
-        <div class="hobby-card">
-          <div class="hobby-emoji">🎮</div>
-          <div class="hobby-name">Gaming</div>
-          <div class="hobby-desc">Indie games, story-driven RPGs, and mobile puzzle games. I pay attention to UX even when I'm playing.</div>
-        </div>
-        <div class="hobby-card">
-          <div class="hobby-emoji">📚</div>
-          <div class="hobby-name">Reading</div>
-          <div class="hobby-desc">Tech blogs, design articles, and the occasional novel. Staying curious keeps me sharp.</div>
-        </div>
-        <div class="hobby-card">
-          <div class="hobby-emoji">🎵</div>
-          <div class="hobby-name">Music</div>
-          <div class="hobby-desc">Lo-fi and indie playlists fuel my focus sessions. Music is the background to every sprint.</div>
-        </div>
-        <div class="hobby-card">
-          <div class="hobby-emoji">✍️</div>
-          <div class="hobby-name">Journaling</div>
-          <div class="hobby-desc">Daily reflections, sprint retrospectives for my personal goals — structure even in rest.</div>
-        </div>
-        <div class="hobby-card">
-          <div class="hobby-emoji">🌿</div>
-          <div class="hobby-name">Plants & Spaces</div>
-          <div class="hobby-desc">I love designing cozy spaces. Arrangement and aesthetics are a kind of UI design, really.</div>
-        </div>
-      </div>
-    </div>
-
-    <!-- TIMELINE -->
-    <div class="timeline-section">
-      <div class="skills-inner-title">
-        <span class="skills-inner-label">My Timeline</span>
-        <div class="skills-inner-line"></div>
-      </div>
-      <div class="timeline">
-        <div class="tl-item">
-          <div class="tl-icon-wrap"><i class="fas fa-graduation-cap"></i></div>
-          <span class="tl-date">2021 – Present</span>
-          <h5>BS Information Technology — <span>Polytechnic University of the Philippines</span></h5>
-          <p>Currently a 4th-year student focused on software development, web technologies, and database management systems.</p>
-        </div>
-        <div class="tl-item">
-          <div class="tl-icon-wrap"><i class="fas fa-laptop-code"></i></div>
-          <span class="tl-date">2024</span>
-          <h5>Capstone Project Lead — <span>Web-based System Development</span></h5>
-          <p>Led a team as Project Manager — handled sprint planning, task delegation, stakeholder communication, and final delivery of a fully functional web application.</p>
-        </div>
-        <div class="tl-item">
-          <div class="tl-icon-wrap"><i class="fas fa-briefcase"></i></div>
-          <span class="tl-date">2023</span>
-          <h5>On-the-Job Training — <span>IT Internship</span></h5>
-          <p>Completed internship with hands-on exposure to software development workflows, documentation, and team collaboration.</p>
-        </div>
-        <div class="tl-item">
-          <div class="tl-icon-wrap"><i class="fas fa-school"></i></div>
-          <span class="tl-date">2017 – 2021</span>
-          <h5>Senior High School — <span>GAS Strand</span></h5>
-          <p>Graduated with high honors, with a focus on science, technology, engineering, and mathematics.</p>
-        </div>
-         <div class="tl-item">
-          <div class="tl-icon-wrap"><i class="fas fa-school"></i></div>
-          <span class="tl-date">2017 – 2021</span>
-          <h5>Senior High School — <span>GAS Strand</span></h5>
-          <p>Graduated with high honors, with a focus on science, technology, engineering, and mathematics.</p>
-        </div>
-         <div class="tl-item">
-          <div class="tl-icon-wrap"><i class="fas fa-school"></i></div>
-          <span class="tl-date">2017 – 2021</span>
-          <h5>Senior High School — <span>GAS Strand</span></h5>
-          <p>Graduated with high honors, with a focus on science, technology, engineering, and mathematics.</p>
+      <div class="home-right">
+        <div class="img-frame">
+          <div class="img-grid"></div>
+          <svg class="img-geo-svg" viewBox="0 0 424 524" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path class="geo-path-1" d="M 30 0 L 394 0 L 424 30 L 424 494 L 394 524 L 30 524 L 0 494 L 0 30 Z"
+              stroke="rgba(124,58,237,0.4)" stroke-width="1" fill="none" />
+            <path class="geo-path-2" d="M 40 10 L 384 10 L 414 40 L 414 484 L 384 514 L 40 514 L 10 484 L 10 40 Z"
+              stroke="rgba(167,139,250,0.18)" stroke-width="0.8" fill="none" />
+            <path class="geo-path-3" d="M 80 0 L 60 20 M 344 0 L 364 20 M 80 524 L 60 504 M 344 524 L 364 504"
+              stroke="rgba(244,114,182,0.5)" stroke-width="1.5" fill="none" stroke-linecap="round" />
+          </svg>
+          <div class="img-corner tl"></div>
+          <div class="img-corner tr"></div>
+          <div class="img-corner bl"></div>
+          <div class="img-corner br"></div>
+          <div class="img-frame-inner">
+            <img src="assets/image1.png" alt="Marifiel Coleen L. Isles">
+          </div>
+          <div class="img-label">
+            Project&nbsp;Manager&nbsp;&middot;&nbsp;Front-End&nbsp;Dev&nbsp;&middot;&nbsp;PUP&nbsp;STC</div>
         </div>
       </div>
     </div>
   </div>
-</div>
 
-<!-- ── PORTFOLIO ── -->
-<div class="section" id="portfolio">
-  <div class="sec-wrap">
-    <div class="sec-title">
-      <div class="eyebrow-bar">
-        <div class="eyebrow-tick"></div>
-        <span class="eyebrow-num-label">02</span>
-        <div class="eyebrow-line"></div>
-        <span class="eyebrow-tag">My Work</span>
-      </div>
-      <h2>Selected <em>Projects</em></h2>
-    </div>
-    <p class="port-intro">A curated selection of projects I've built — from web applications to academic systems and beyond. Each one represents a challenge met and a lesson learned.</p>
+  <!-- ── ABOUT ── -->
+  <div class="section" id="about">
+    <div class="sec-wrap">
 
-    <div class="port-filter">
-      <button class="port-filter-btn active" data-filter="all">All</button>
-      <button class="port-filter-btn" data-filter="web">Web</button>
-      <button class="port-filter-btn" data-filter="app">App Dev</button>
-      <button class="port-filter-btn" data-filter="game">Game</button>
-      <button class="port-filter-btn" data-filter="design">Design</button>
-    </div>
-
-    <div class="port-grid">
-      <div class="port-card" data-category="app">
-        <div class="port-card-thumb" style="background:linear-gradient(135deg,#1a0d2e,#3b1f6b);height:220px;display:flex;align-items:center;justify-content:center;">
-          <i class="fas fa-music" style="font-size:3.5rem;color:rgba(167,139,250,0.35);"></i>
+      <!-- NEW EYEBROW TREATMENT -->
+      <div class="sec-title">
+        <div class="eyebrow-bar">
+          <div class="eyebrow-tick"></div>
+          <span class="eyebrow-num-label">01</span>
+          <div class="eyebrow-line"></div>
+          <span class="eyebrow-tag">Who Am I</span>
         </div>
-        <div class="port-card-overlay">
-          <div class="port-card-actions">
-            <a href="https://colelezzz-github-io.vercel.app/ADET/A02/index.php" target="_blank" class="port-card-link"><i class="fas fa-external-link-alt"></i></a>
-          </div>
-        </div>
-        <div class="port-card-body">
-          <div class="port-card-tag">MVC · PHP · MySQL</div>
-          <div class="port-card-title">Spotify-Inspired Music Platform</div>
-          <div class="port-card-desc">Dynamic music platform built with MVC architecture for a clean, scalable user experience.</div>
-        </div>
+        <h2>About <em>Me</em></h2>
       </div>
 
-      <div class="port-card" data-category="web">
-        <div class="port-card-thumb" style="background:linear-gradient(135deg,#0d1a35,#1a3a6b);height:220px;display:flex;align-items:center;justify-content:center;">
-          <i class="fas fa-map-location-dot" style="font-size:3.5rem;color:rgba(96,165,250,0.35);"></i>
-        </div>
-        <div class="port-card-overlay">
-          <div class="port-card-actions">
-            <a href="https://colelezzz-github-io.vercel.app/webdev/A07/index.html" target="_blank" class="port-card-link"><i class="fas fa-external-link-alt"></i></a>
-          </div>
-        </div>
-        <div class="port-card-body">
-          <div class="port-card-tag">Leaflet · PHP · MySQL</div>
-          <div class="port-card-title">Interactive Event Map</div>
-          <div class="port-card-desc">Users create events by pinning locations on a Leaflet map — coordinates saved directly to a MySQL database.</div>
-        </div>
-      </div>
+      <div class="about-grid">
+        <div class="about-text">
+          <p>My name is <strong style="color:var(--cream)">Marifiel Coleen L. Isles</strong>. My name is Rio Isles. I am
+            currently a final-year IT student with a strong focus on Project Management, while also actively
+            contributing as a Front-End Developer in most of my group projects. </p>
 
-      <div class="port-card" data-category="web">
-        <div class="port-card-thumb" style="background:linear-gradient(135deg,#1a1635,#3b2a6b);height:220px;display:flex;align-items:center;justify-content:center;">
-          <i class="fas fa-layer-group" style="font-size:3.5rem;color:rgba(167,139,250,0.35);"></i>
-        </div>
-        <div class="port-card-overlay">
-          <div class="port-card-actions">
-            <a href="https://colelezzz-github-io.vercel.app/webdev/M02/index.html" target="_blank" class="port-card-link"><i class="fas fa-external-link-alt"></i></a>
-          </div>
-        </div>
-        <div class="port-card-body">
-          <div class="port-card-tag">HTML · CSS · JS</div>
-          <div class="port-card-title">Parallax Scroll Experience</div>
-          <div class="port-card-desc">Immersive parallax website with layered depth effects and smooth scroll animations.</div>
-        </div>
-      </div>
+          <p>I enjoy bringing structure to ideas — from creating clear tickets and organizing workflows in Kanban boards
+            to planning timelines using tools like Excel, ClickUp, or GitHub Projects. Managing tasks and ensuring
+            everything stays on track is where I naturally excel. At the same time, I have a passion for building user
+            interfaces that are not only functional but also
+            engaging. I pay close attention to small details that improve user experience, aiming to create designs that
+            feel smooth and intuitive.</p>
 
-      <div class="port-card" data-category="app">
-        <div class="port-card-thumb" style="background:linear-gradient(135deg,#1a0d2a,#4a1a5e);height:220px;display:flex;align-items:center;justify-content:center;">
-          <i class="fas fa-cash-register" style="font-size:3.5rem;color:rgba(244,114,182,0.35);"></i>
-        </div>
-        <div class="port-card-overlay">
-          <div class="port-card-actions">
-            <a href="https://colelezzz-github-io.vercel.app/ADET/A06/A06_FE/index.html" target="_blank" class="port-card-link"><i class="fas fa-external-link-alt"></i></a>
-          </div>
-        </div>
-        <div class="port-card-body">
-          <div class="port-card-tag">PHP · MySQL · Backend</div>
-          <div class="port-card-title">Flower Shop POS System</div>
-          <div class="port-card-desc">Admin POS interface for managing inventory, sales, and orders — fully integrated with a backend.</div>
-        </div>
-      </div>
-
-      <div class="port-card" data-category="game">
-        <div class="port-card-thumb" style="background:linear-gradient(135deg,#1f0d35,#5a1a2e);height:220px;display:flex;align-items:center;justify-content:center;">
-          <i class="fas fa-gamepad" style="font-size:3.5rem;color:rgba(251,191,36,0.35);"></i>
-        </div>
-        <div class="port-card-overlay">
-          <div class="port-card-actions">
-            <a href="#" class="port-card-link"><i class="fas fa-external-link-alt"></i></a>
-          </div>
-        </div>
-        <div class="port-card-body">
-          <div class="port-card-tag">Java · OOP</div>
-          <div class="port-card-title">Inside Out — Four Pics One Word</div>
-          <div class="port-card-desc">Java game inspired by Inside Out, themed around "Anger" — built with object-oriented programming principles.</div>
-        </div>
-      </div>
-
-      <div class="port-card" data-category="design">
-        <div class="port-card-thumb" style="background:linear-gradient(135deg,#0d1635,#1a3050);height:220px;display:flex;align-items:center;justify-content:center;">
-          <i class="fas fa-table-cells-large" style="font-size:3.5rem;color:rgba(96,165,250,0.35);"></i>
-        </div>
-        <div class="port-card-overlay">
-          <div class="port-card-actions">
-            <a href="https://colelezzz-github-io.vercel.app/ADET/A03/index.html" target="_blank" class="port-card-link"><i class="fas fa-external-link-alt"></i></a>
-          </div>
-        </div>
-        <div class="port-card-body">
-          <div class="port-card-tag">HTML · CSS · Design</div>
-          <div class="port-card-title">Powerpuff Girls Bento Layout</div>
-          <div class="port-card-desc">Vibrant bento-style grid layout inspired by the Powerpuff Girls — playful design meets structured CSS.</div>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-
-<!-- ── SKILLS + ACHIEVEMENTS ── -->
-<div class="section" id="services">
-  <div class="sec-wrap">
-    <div class="sec-title">
-      <div class="eyebrow-bar">
-        <div class="eyebrow-tick"></div>
-        <span class="eyebrow-num-label">03</span>
-        <div class="eyebrow-line"></div>
-        <span class="eyebrow-tag">My Focus Areas</span>
-      </div>
-      <h2>What I <em>Do</em></h2>
-    </div>
-
-    <!-- FOCUS AREAS -->
-    <div class="services-grid">
-      <div class="service-card">
-        <div class="service-icon"><i class="fas fa-diagram-project"></i></div>
-        <h3>Project Management</h3>
-        <p>Planning sprints, coordinating teams, managing scope and deadlines. I bridge the gap between what needs to be built and who's building it — keeping everything on track.</p>
-      </div>
-      <div class="service-card">
-        <div class="service-icon"><i class="fas fa-window-maximize"></i></div>
-        <h3>Front-End Development</h3>
-        <p>Building responsive, interactive interfaces with HTML, CSS, and JavaScript. From a pixel-perfect layout to smooth micro-interactions — I care about how things look and feel.</p>
-      </div>
-      <div class="service-card">
-        <div class="service-icon"><i class="fas fa-pen-ruler"></i></div>
-        <h3>UI/UX Design</h3>
-        <p>Designing clear, usable experiences in Figma — wireframes, prototypes, and component systems that make both users and developers happy.</p>
-      </div>
-      <div class="service-card">
-        <div class="service-icon"><i class="fas fa-users-gear"></i></div>
-        <h3>Team &amp; Agile Coordination</h3>
-        <p>Running standups, retrospectives, and backlog grooming. I keep teams communicating clearly and moving with purpose through Scrum and Kanban workflows.</p>
-      </div>
-      <div class="service-card" style="opacity:0.75;">
-        <div class="service-icon"><i class="fas fa-vial-circle-check"></i></div>
-        <h3>Quality Assurance <span style="font-size:0.7rem;color:var(--muted);font-weight:400;">(secondary)</span></h3>
-        <p>Writing test cases, conducting manual testing, and catching bugs before they reach users. Familiar with QA processes and documentation from coursework and projects.</p>
-      </div>
-      <div class="service-card" style="opacity:0.75;">
-        <div class="service-icon"><i class="fas fa-server"></i></div>
-        <h3>Back-End Basics <span style="font-size:0.7rem;color:var(--muted);font-weight:400;">(secondary)</span></h3>
-        <p>Working knowledge of PHP, MySQL, and MVC architecture — enough to connect a frontend to a database and understand how the full stack fits together.</p>
-      </div>
-    </div>
-
-    <!-- SKILL BARS -->
-    <div class="skills-section" style="margin-bottom:4rem;">
-      <div class="skills-inner-title">
-        <span class="skills-inner-label">Front-End Skills</span>
-        <div class="skills-inner-line"></div>
-      </div>
-      <div class="skills-grid">
-        <div class="skill-item">
-          <div class="skill-head"><span class="skill-name">HTML &amp; CSS</span><span class="skill-pct">80%</span></div>
-          <div class="skill-bar"><div class="skill-fill" data-w="80"></div></div>
-        </div>
-        <div class="skill-item">
-          <div class="skill-head"><span class="skill-name">JavaScript</span><span class="skill-pct">70%</span></div>
-          <div class="skill-bar"><div class="skill-fill" data-w="70"></div></div>
-        </div>
-        <div class="skill-item">
-          <div class="skill-head"><span class="skill-name">Figma / UI Design</span><span class="skill-pct">75%</span></div>
-          <div class="skill-bar"><div class="skill-fill" data-w="75"></div></div>
-        </div>
-        <div class="skill-item">
-          <div class="skill-head"><span class="skill-name">Responsive Design</span><span class="skill-pct">78%</span></div>
-          <div class="skill-bar"><div class="skill-fill" data-w="78"></div></div>
-        </div>
-      </div>
-      <div class="skills-inner-title" style="margin-top:2.5rem;">
-        <span class="skills-inner-label">Project Management Skills</span>
-        <div class="skills-inner-line"></div>
-      </div>
-      <div class="skills-grid">
-        <div class="skill-item">
-          <div class="skill-head"><span class="skill-name">Agile / Scrum</span><span class="skill-pct">76%</span></div>
-          <div class="skill-bar"><div class="skill-fill" data-w="76"></div></div>
-        </div>
-        <div class="skill-item">
-          <div class="skill-head"><span class="skill-name">Team Leadership</span><span class="skill-pct">80%</span></div>
-          <div class="skill-bar"><div class="skill-fill" data-w="80"></div></div>
-        </div>
-        <div class="skill-item">
-          <div class="skill-head"><span class="skill-name">Risk &amp; Scope Planning</span><span class="skill-pct">68%</span></div>
-          <div class="skill-bar"><div class="skill-fill" data-w="68"></div></div>
-        </div>
-        <div class="skill-item">
-          <div class="skill-head"><span class="skill-name">Documentation</span><span class="skill-pct">82%</span></div>
-          <div class="skill-bar"><div class="skill-fill" data-w="82"></div></div>
-        </div>
-      </div>
-    </div>
-
-    <!-- CREDENTIALS & ACHIEVEMENTS -->
-    <div class="achieve-section">
-      <div class="skills-inner-title" style="margin-bottom:2.5rem;">
-        <span class="skills-inner-label">Credentials &amp; Achievements</span>
-        <div class="skills-inner-line"></div>
-      </div>
-
-      <!-- STAT NUMBERS -->
-      <div class="achieve-stats">
-        <div class="achieve-stat">
-          <div class="achieve-num" data-target="4" data-suffix="+">0+</div>
-          <div class="achieve-stat-label">Years of Study</div>
-        </div>
-        <div class="achieve-stat">
-          <div class="achieve-num" data-target="6" data-suffix="+">0+</div>
-          <div class="achieve-stat-label">Projects Shipped</div>
-        </div>
-        <div class="achieve-stat">
-          <div class="achieve-num" data-target="3" data-suffix="x">0x</div>
-          <div class="achieve-stat-label">Dean's Lister</div>
-        </div>
-        <div class="achieve-stat">
-          <div class="achieve-num" data-target="1" data-suffix="">0</div>
-          <div class="achieve-stat-label">Capstone PM Lead</div>
-        </div>
-      </div>
-
-      <!-- ACHIEVEMENT CARDS with image slots -->
-      <div class="achieve-grid">
-
-        <div class="achieve-card">
-          <div class="achieve-card-img-wrap">
-            <!-- Replace src with actual certificate/award image -->
-            <div class="achieve-img-placeholder">
-              <i class="fas fa-award"></i>
-              <span>Upload Image</span>
-            </div>
-            <!-- Uncomment and use: <img src="assets/cert-honor.jpg" alt="With Honors"> -->
-          </div>
-          <div class="achieve-card-body">
-            <div class="achieve-card-badge"><i class="fas fa-star"></i> Academic</div>
-            <h4>Graduated with High Honors</h4>
-            <p>Completed Senior High School under the GAS Strand with recognition for academic excellence and consistent performance.</p>
-            <div class="achieve-card-year">2021</div>
+          <p>Whether I’m coordinating a team or developing the front end, I bring organization, accountability, and a
+            detail-oriented mindset to every project.</p>
+          <div class="tech-tags">
+            <span class="tech-tag">Agile & Scrum</span>
+            <span class="tech-tag">Project Management</span>
+            <span class="tech-tag">Risk Management</span>
+            <span class="tech-tag">ClickUp</span>
+            <span class="tech-tag">GitHub Projects (Kanban)</span>
+            <span class="tech-tag">Figma (UI/UX Design)</span>
+            <span class="tech-tag">HTML, CSS & JavaScript</span>
+            <span class="tech-tag">Git (Version Control)</span>
           </div>
         </div>
 
-        <div class="achieve-card">
-          <div class="achieve-card-img-wrap">
-            <div class="achieve-img-placeholder">
-              <i class="fas fa-list-check"></i>
-              <span>Upload Image</span>
-            </div>
+        <div class="about-cards">
+          <div class="about-card">
+            <div class="about-card-icon"><i class="fas fa-people-group"></i></div>
+            <div class="about-card-num">Team<br>First</div>
+            <div class="about-card-label">I lead with clarity and structure — organizing tasks, aligning teammates, and
+              keeping everyone on track through well-managed workflows.</div>
           </div>
-          <div class="achieve-card-body">
-            <div class="achieve-card-badge"><i class="fas fa-diagram-project"></i> Leadership</div>
-            <h4>Capstone Project Manager</h4>
-            <p>Led a full development team through the entire software lifecycle — from requirements gathering and sprint planning to final deployment.</p>
-            <div class="achieve-card-year">2024</div>
+          <div class="about-card">
+            <div class="about-card-icon"><i class="fas fa-pen-to-square"></i></div>
+            <div class="about-card-num">Detail<br>Driven</div>
+            <div class="about-card-label">From Kanban boards and timelines to UI spacing and interactions — I focus on
+              the small details that make projects run smoothly and feel polished.</div>
           </div>
-        </div>
-
-        <div class="achieve-card">
-          <div class="achieve-card-img-wrap">
-            <div class="achieve-img-placeholder">
-              <i class="fas fa-briefcase"></i>
-              <span>Upload Image</span>
-            </div>
+          <div class="about-card">
+            <div class="about-card-icon"><i class="fas fa-seedling"></i></div>
+            <div class="about-card-num">Always<br>Learning</div>
+            <div class="about-card-label">Exploring Agile practices, improving workflows, and refining front-end skills
+              — I’m always growing both as a PM and a developer.</div>
           </div>
-          <div class="achieve-card-body">
-            <div class="achieve-card-badge"><i class="fas fa-building"></i> Experience</div>
-            <h4>IT Internship Completion</h4>
-            <p>Successfully completed on-the-job training with real-world exposure to software workflows, technical documentation, and team collaboration.</p>
-            <div class="achieve-card-year">2023</div>
+          <div class="about-card">
+            <div class="about-card-icon"><i class="fas fa-link"></i></div>
+            <div class="about-card-num">The<br>Bridge</div>
+            <div class="about-card-label">Balancing project management and front-end development — I connect planning
+              with execution to turn ideas into functional, engaging interfaces.</div>
           </div>
         </div>
-
-        <div class="achieve-card">
-          <div class="achieve-card-img-wrap">
-            <div class="achieve-img-placeholder">
-              <i class="fas fa-book-open"></i>
-              <span>Upload Image</span>
-            </div>
-          </div>
-          <div class="achieve-card-body">
-            <div class="achieve-card-badge"><i class="fas fa-graduation-cap"></i> Academic</div>
-            <h4>Dean's List — Multiple Semesters</h4>
-            <p>Recognized on the Dean's List across multiple semesters at PUP for maintaining consistent academic standing in BS Information Technology.</p>
-            <div class="achieve-card-year">2022–2024</div>
-          </div>
-        </div>
-
       </div>
-
-      <!-- TOOLS & CERTIFICATIONS ROW -->
-      <div class="tools-row">
-        <div class="skills-inner-title" style="margin-bottom:2rem;">
-          <span class="skills-inner-label">Tools &amp; Platforms I Work With</span>
+      <!-- HOBBIES & INTERESTS -->
+      <div class="hobbies-section">
+        <div class="skills-inner-title">
+          <span class="skills-inner-label">Beyond the Keyboard</span>
           <div class="skills-inner-line"></div>
         </div>
-        <div class="tools-grid">
-          <div class="tool-pill"><i class="fab fa-figma"></i> Figma</div>
-          <div class="tool-pill"><i class="fab fa-github"></i> GitHub</div>
-          <div class="tool-pill"><i class="fab fa-js"></i> JavaScript</div>
-          <div class="tool-pill"><i class="fab fa-react"></i> React</div>
-          <div class="tool-pill"><i class="fab fa-php"></i> PHP</div>
-          <div class="tool-pill"><i class="fas fa-database"></i> MySQL</div>
-          <div class="tool-pill"><i class="fas fa-check-double"></i> Jira</div>
-          <div class="tool-pill"><i class="fab fa-trello"></i> Trello</div>
-          <div class="tool-pill"><i class="fas fa-leaf"></i> Leaflet.js</div>
-          <div class="tool-pill"><i class="fas fa-layer-group"></i> MVC</div>
-          <div class="tool-pill"><i class="fas fa-rotate"></i> Agile/Scrum</div>
-          <div class="tool-pill"><i class="fas fa-file-code"></i> VS Code</div>
+        <div class="hobbies-grid">
+
+          <div class="hobby-card">
+            <div class="hobby-emoji">🎮</div>
+            <div class="hobby-name">Gaming</div>
+            <div class="hobby-desc">
+              Competitive in Mobile Legends, reaching leaderboards, and playing during free time. I also enjoy small
+              mobile games like pattern and mind games that challenge my thinking and reflexes.
+            </div>
+          </div>
+
+          <div class="hobby-card">
+            <div class="hobby-emoji">🎤</div>
+            <div class="hobby-name">Singing</div>
+            <div class="hobby-desc">
+              I’m confident in my singing and love performing in karaoke sessions and duets — it’s one of my favorite
+              ways to relax and connect with others.
+            </div>
+          </div>
+
+          <div class="hobby-card">
+            <div class="hobby-emoji">💃</div>
+            <div class="hobby-name">Dancing</div>
+            <div class="hobby-desc">
+              I enjoy dancing for fun and self-expression — whether it’s following trends or just vibing to music, it
+              helps me stay active and creative.
+            </div>
+          </div>
+
+          <div class="hobby-card">
+            <div class="hobby-emoji">📚</div>
+            <div class="hobby-name">Reading & Movies</div>
+            <div class="hobby-desc">
+              I read when I have free time and enjoy watching movies more than series — I appreciate good stories and
+              visuals.
+            </div>
+          </div>
+
+          <div class="hobby-card">
+            <div class="hobby-emoji">🐶</div>
+            <div class="hobby-name">Dogs</div>
+            <div class="hobby-desc">
+              A dog lover with a Shih Tzu named Rio — we have five Shih Tzus at home, and they’re a big part of my daily
+              life.
+            </div>
+          </div>
+
+          <div class="hobby-card">
+            <div class="hobby-emoji">👜</div>
+            <div class="hobby-name">Style & Self-Care</div>
+            <div class="hobby-desc">
+              I enjoy exploring fashion, especially bags and makeup — from trying new looks to taking time for
+              self-care, it’s my way of expressing confidence and creativity.
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- TIMELINE -->
+      <div class="timeline-section">
+        <div class="skills-inner-title">
+          <span class="skills-inner-label">My Timeline</span>
+          <div class="skills-inner-line"></div>
+        </div>
+        <div class="timeline">
+          <div class="tl-item">
+            <div class="tl-icon-wrap"><i class="fas fa-graduation-cap"></i></div>
+            <span class="tl-date">2021 – Present</span>
+            <h5>BS Information Technology — <span>Polytechnic University of the Philippines</span></h5>
+            <p>Currently a 4th-year student focused on software development, web technologies, and database management
+              systems.</p>
+          </div>
+          <div class="tl-item">
+            <div class="tl-icon-wrap"><i class="fas fa-laptop-code"></i></div>
+            <span class="tl-date">2024</span>
+            <h5>Capstone Project Lead — <span>Web-based System Development</span></h5>
+            <p>Led a team as Project Manager — handled sprint planning, task delegation, stakeholder communication, and
+              final delivery of a fully functional web application.</p>
+          </div>
+          <div class="tl-item">
+            <div class="tl-icon-wrap"><i class="fas fa-briefcase"></i></div>
+            <span class="tl-date">2023</span>
+            <h5>On-the-Job Training — <span>IT Internship</span></h5>
+            <p>Completed internship with hands-on exposure to software development workflows, documentation, and team
+              collaboration.</p>
+          </div>
+          <div class="tl-item">
+            <div class="tl-icon-wrap"><i class="fas fa-school"></i></div>
+            <span class="tl-date">2017 – 2021</span>
+            <h5>Senior High School — <span>GAS Strand</span></h5>
+            <p>Graduated with high honors, with a focus on science, technology, engineering, and mathematics.</p>
+          </div>
+          <div class="tl-item">
+            <div class="tl-icon-wrap"><i class="fas fa-school"></i></div>
+            <span class="tl-date">2017 – 2021</span>
+            <h5>Senior High School — <span>GAS Strand</span></h5>
+            <p>Graduated with high honors, with a focus on science, technology, engineering, and mathematics.</p>
+          </div>
+          <div class="tl-item">
+            <div class="tl-icon-wrap"><i class="fas fa-school"></i></div>
+            <span class="tl-date">2017 – 2021</span>
+            <h5>Senior High School — <span>GAS Strand</span></h5>
+            <p>Graduated with high honors, with a focus on science, technology, engineering, and mathematics.</p>
+          </div>
         </div>
       </div>
     </div>
   </div>
-</div>
 
-<!-- ── CONTACT ── -->
-<div class="section" id="contact">
-  <div class="sec-wrap">
-    <div class="sec-title">
-      <div class="eyebrow-bar">
-        <div class="eyebrow-tick"></div>
-        <span class="eyebrow-num-label">04</span>
-        <div class="eyebrow-line"></div>
-        <span class="eyebrow-tag">Let's Talk</span>
+  <!-- ── PORTFOLIO ── -->
+  <div class="section" id="portfolio">
+    <div class="sec-wrap">
+      <div class="sec-title">
+        <div class="eyebrow-bar">
+          <div class="eyebrow-tick"></div>
+          <span class="eyebrow-num-label">02</span>
+          <div class="eyebrow-line"></div>
+          <span class="eyebrow-tag">My Work</span>
+        </div>
+        <h2>Selected <em>Projects</em></h2>
       </div>
-      <h2>Say <em>Hello</em></h2>
-    </div>
-    <div class="contact-grid">
-      <div>
-        <p style="font-size:0.92rem;line-height:1.9;color:rgba(250,248,245,0.6);margin-bottom:0;">
-          Looking for a project manager who can also build the frontend? Or a front-end developer who understands timelines, scope, and people? That's exactly where I thrive. Let's talk.
-        </p>
-        <div class="contact-info-list">
-          <div class="contact-info-item">
-            <div class="ci-icon"><i class="fas fa-map-marker-alt"></i></div>
-            <div>
-              <div class="ci-text-label">Location</div>
-              <div class="ci-text-val">Philippines</div>
-            </div>
-          </div>
-          <div class="contact-info-item">
-            <div class="ci-icon"><i class="fas fa-envelope"></i></div>
-            <div>
-              <div class="ci-text-label">Email</div>
-              <div class="ci-text-val"><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="33505c5f56565d1d5a405f564073565e525a5f1d505c5e">[email&#160;protected]</a></div>
-            </div>
-          </div>
-          <div class="contact-info-item">
-            <div class="ci-icon"><i class="fas fa-phone"></i></div>
-            <div>
-              <div class="ci-text-label">Mobile</div>
-              <div class="ci-text-val">+63 9XX XXX XXXX</div>
-            </div>
-          </div>
-          <div class="contact-info-item">
-            <div class="ci-icon"><i class="fas fa-language"></i></div>
-            <div>
-              <div class="ci-text-label">Languages</div>
-              <div class="ci-text-val">English, Filipino</div>
-            </div>
-          </div>
-        </div>
-        <div class="social-links">
-          <a href="#" class="social-link" title="Facebook"><i class="fab fa-facebook-f"></i></a>
-          <a href="#" class="social-link" title="GitHub"><i class="fab fa-github"></i></a>
-          <a href="#" class="social-link" title="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
-          <a href="#" class="social-link" title="Twitter"><i class="fab fa-twitter"></i></a>
-        </div>
+      <p class="port-intro">A curated selection of projects I've built — from web applications to academic systems and
+        beyond. Each one represents a challenge met and a lesson learned.</p>
+
+      <div class="port-filter">
+        <button class="port-filter-btn active" data-filter="all">All</button>
+        <button class="port-filter-btn" data-filter="web">Web</button>
+        <button class="port-filter-btn" data-filter="app">App Dev</button>
+        <button class="port-filter-btn" data-filter="game">Game</button>
+        <button class="port-filter-btn" data-filter="design">Design</button>
       </div>
 
-      <div class="contact-form-wrap">
-        <form id="contactForm">
-          <div class="form-row">
-            <div class="form-group">
-              <label>Your Name</label>
-              <input type="text" id="from_name" name="from_name" placeholder="e.g. Juan dela Cruz" required>
+      <div class="port-grid">
+        <div class="port-card" data-category="app">
+          <div class="port-card-thumb"
+            style="background:linear-gradient(135deg,#1a0d2e,#3b1f6b);height:220px;display:flex;align-items:center;justify-content:center;">
+            <i class="fas fa-music" style="font-size:3.5rem;color:rgba(167,139,250,0.35);"></i>
+          </div>
+          <div class="port-card-overlay">
+            <div class="port-card-actions">
+              <a href="https://colelezzz-github-io.vercel.app/ADET/A02/index.php" target="_blank"
+                class="port-card-link"><i class="fas fa-external-link-alt"></i></a>
             </div>
-            <div class="form-group">
-              <label>Your Email</label>
-              <input type="email" id="from_email" name="from_email" placeholder="email@example.com" required>
+          </div>
+          <div class="port-card-body">
+            <div class="port-card-tag">MVC · PHP · MySQL</div>
+            <div class="port-card-title">Spotify-Inspired Music Platform</div>
+            <div class="port-card-desc">Dynamic music platform built with MVC architecture for a clean, scalable user
+              experience.</div>
+          </div>
+        </div>
+
+        <div class="port-card" data-category="web">
+          <div class="port-card-thumb"
+            style="background:linear-gradient(135deg,#0d1a35,#1a3a6b);height:220px;display:flex;align-items:center;justify-content:center;">
+            <i class="fas fa-map-location-dot" style="font-size:3.5rem;color:rgba(96,165,250,0.35);"></i>
+          </div>
+          <div class="port-card-overlay">
+            <div class="port-card-actions">
+              <a href="https://colelezzz-github-io.vercel.app/webdev/A07/index.html" target="_blank"
+                class="port-card-link"><i class="fas fa-external-link-alt"></i></a>
             </div>
           </div>
-          <div class="form-group">
-            <label>Subject</label>
-            <select id="subject" name="subject">
-              <option value="">Select a topic...</option>
-              <option>Project Management Role</option>
-              <option>Front-End Development Role</option>
-              <option>Internship Opportunity</option>
-              <option>Freelance / Contract Work</option>
-              <option>Collaboration</option>
-              <option>Other</option>
-            </select>
+          <div class="port-card-body">
+            <div class="port-card-tag">Leaflet · PHP · MySQL</div>
+            <div class="port-card-title">Interactive Event Map</div>
+            <div class="port-card-desc">Users create events by pinning locations on a Leaflet map — coordinates saved
+              directly to a MySQL database.</div>
           </div>
-          <div class="form-group">
-            <label>Message</label>
-            <textarea id="message" name="message" rows="5" placeholder="Tell me about your project or opportunity..."></textarea>
+        </div>
+
+        <div class="port-card" data-category="web">
+          <div class="port-card-thumb"
+            style="background:linear-gradient(135deg,#1a1635,#3b2a6b);height:220px;display:flex;align-items:center;justify-content:center;">
+            <i class="fas fa-layer-group" style="font-size:3.5rem;color:rgba(167,139,250,0.35);"></i>
           </div>
-          <button type="submit" class="form-submit" id="submitBtn">
-            <i class="fas fa-paper-plane"></i> Send Message
-          </button>
-        </form>
-        <div class="form-success" id="formSuccess">
-          <i class="fas fa-circle-check"></i>
-          <h3 style="margin-bottom:0.5rem;">Message Sent!</h3>
-          <p>Thanks for reaching out. I'll get back to you soon.</p>
+          <div class="port-card-overlay">
+            <div class="port-card-actions">
+              <a href="https://colelezzz-github-io.vercel.app/webdev/M02/index.html" target="_blank"
+                class="port-card-link"><i class="fas fa-external-link-alt"></i></a>
+            </div>
+          </div>
+          <div class="port-card-body">
+            <div class="port-card-tag">HTML · CSS · JS</div>
+            <div class="port-card-title">Parallax Scroll Experience</div>
+            <div class="port-card-desc">Immersive parallax website with layered depth effects and smooth scroll
+              animations.</div>
+          </div>
+        </div>
+
+        <div class="port-card" data-category="app">
+          <div class="port-card-thumb"
+            style="background:linear-gradient(135deg,#1a0d2a,#4a1a5e);height:220px;display:flex;align-items:center;justify-content:center;">
+            <i class="fas fa-cash-register" style="font-size:3.5rem;color:rgba(244,114,182,0.35);"></i>
+          </div>
+          <div class="port-card-overlay">
+            <div class="port-card-actions">
+              <a href="https://colelezzz-github-io.vercel.app/ADET/A06/A06_FE/index.html" target="_blank"
+                class="port-card-link"><i class="fas fa-external-link-alt"></i></a>
+            </div>
+          </div>
+          <div class="port-card-body">
+            <div class="port-card-tag">PHP · MySQL · Backend</div>
+            <div class="port-card-title">Flower Shop POS System</div>
+            <div class="port-card-desc">Admin POS interface for managing inventory, sales, and orders — fully integrated
+              with a backend.</div>
+          </div>
+        </div>
+
+        <div class="port-card" data-category="game">
+          <div class="port-card-thumb"
+            style="background:linear-gradient(135deg,#1f0d35,#5a1a2e);height:220px;display:flex;align-items:center;justify-content:center;">
+            <i class="fas fa-gamepad" style="font-size:3.5rem;color:rgba(251,191,36,0.35);"></i>
+          </div>
+          <div class="port-card-overlay">
+            <div class="port-card-actions">
+              <a href="#" class="port-card-link"><i class="fas fa-external-link-alt"></i></a>
+            </div>
+          </div>
+          <div class="port-card-body">
+            <div class="port-card-tag">Java · OOP</div>
+            <div class="port-card-title">Inside Out — Four Pics One Word</div>
+            <div class="port-card-desc">Java game inspired by Inside Out, themed around "Anger" — built with
+              object-oriented programming principles.</div>
+          </div>
+        </div>
+
+        <div class="port-card" data-category="design">
+          <div class="port-card-thumb"
+            style="background:linear-gradient(135deg,#0d1635,#1a3050);height:220px;display:flex;align-items:center;justify-content:center;">
+            <i class="fas fa-table-cells-large" style="font-size:3.5rem;color:rgba(96,165,250,0.35);"></i>
+          </div>
+          <div class="port-card-overlay">
+            <div class="port-card-actions">
+              <a href="https://colelezzz-github-io.vercel.app/ADET/A03/index.html" target="_blank"
+                class="port-card-link"><i class="fas fa-external-link-alt"></i></a>
+            </div>
+          </div>
+          <div class="port-card-body">
+            <div class="port-card-tag">HTML · CSS · Design</div>
+            <div class="port-card-title">Powerpuff Girls Bento Layout</div>
+            <div class="port-card-desc">Vibrant bento-style grid layout inspired by the Powerpuff Girls — playful design
+              meets structured CSS.</div>
+          </div>
         </div>
       </div>
     </div>
   </div>
-</div>
 
-<!-- Back to top -->
-<div class="scroll-top" id="scrollTop" title="Back to Top">
-  <svg class="btn-ring" viewBox="0 0 54 54" fill="none" xmlns="http://www.w3.org/2000/svg">
-    <circle cx="27" cy="27" r="24" stroke="rgba(167,139,250,0.35)" stroke-width="1.5" stroke-dasharray="6 4" stroke-linecap="round"/>
-    <circle cx="27" cy="27" r="24" stroke="url(#arcGrad)" stroke-width="2" stroke-dasharray="40 111" stroke-dashoffset="-10" stroke-linecap="round"/>
-    <defs>
-      <linearGradient id="arcGrad" x1="0" y1="0" x2="54" y2="54" gradientUnits="userSpaceOnUse">
-        <stop offset="0%" stop-color="#a78bfa"/>
-        <stop offset="100%" stop-color="#f472b6"/>
-      </linearGradient>
-    </defs>
-  </svg>
-  <div class="btn-disc"><i class="fas fa-arrow-up"></i></div>
-</div>
+  <!-- ── SKILLS + ACHIEVEMENTS ── -->
+  <div class="section" id="services">
+    <div class="sec-wrap">
+      <div class="sec-title">
+        <div class="eyebrow-bar">
+          <div class="eyebrow-tick"></div>
+          <span class="eyebrow-num-label">03</span>
+          <div class="eyebrow-line"></div>
+          <span class="eyebrow-tag">My Focus Areas</span>
+        </div>
+        <h2>What I <em>Do</em></h2>
+      </div>
 
-<script src="script.js"></script>
+      <!-- FOCUS AREAS -->
+      <div class="services-grid">
+        <div class="service-card">
+          <div class="service-icon"><i class="fas fa-diagram-project"></i></div>
+          <h3>Project Management</h3>
+          <p>Planning sprints, coordinating teams, managing scope and deadlines. I bridge the gap between what needs to
+            be built and who's building it — keeping everything on track.</p>
+        </div>
+        <div class="service-card">
+          <div class="service-icon"><i class="fas fa-window-maximize"></i></div>
+          <h3>Front-End Development</h3>
+          <p>Building responsive, interactive interfaces with HTML, CSS, and JavaScript. From a pixel-perfect layout to
+            smooth micro-interactions — I care about how things look and feel.</p>
+        </div>
+        <div class="service-card">
+          <div class="service-icon"><i class="fas fa-pen-ruler"></i></div>
+          <h3>UI/UX Design</h3>
+          <p>Designing clear, usable experiences in Figma — wireframes, prototypes, and component systems that make both
+            users and developers happy.</p>
+        </div>
+        <div class="service-card">
+          <div class="service-icon"><i class="fas fa-users-gear"></i></div>
+          <h3>Team &amp; Agile Coordination</h3>
+          <p>Running standups, retrospectives, and backlog grooming. I keep teams communicating clearly and moving with
+            purpose through Scrum and Kanban workflows.</p>
+        </div>
+        <div class="service-card" style="opacity:0.75;">
+          <div class="service-icon"><i class="fas fa-vial-circle-check"></i></div>
+          <h3>Quality Assurance <span style="font-size:0.7rem;color:var(--muted);font-weight:400;">(secondary)</span>
+          </h3>
+          <p>Writing test cases, conducting manual testing, and catching bugs before they reach users. Familiar with QA
+            processes and documentation from coursework and projects.</p>
+        </div>
+        <div class="service-card" style="opacity:0.75;">
+          <div class="service-icon"><i class="fas fa-server"></i></div>
+          <h3>Back-End Basics <span style="font-size:0.7rem;color:var(--muted);font-weight:400;">(secondary)</span></h3>
+          <p>Working knowledge of PHP, MySQL, and MVC architecture — enough to connect a frontend to a database and
+            understand how the full stack fits together.</p>
+        </div>
+      </div>
+
+      <!-- SKILL BARS -->
+      <div class="skills-section" style="margin-bottom:4rem;">
+        <div class="skills-inner-title">
+          <span class="skills-inner-label">Front-End Skills</span>
+          <div class="skills-inner-line"></div>
+        </div>
+        <div class="skills-grid">
+          <div class="skill-item">
+            <div class="skill-head"><span class="skill-name">HTML &amp; CSS</span><span class="skill-pct">80%</span>
+            </div>
+            <div class="skill-bar">
+              <div class="skill-fill" data-w="80"></div>
+            </div>
+          </div>
+          <div class="skill-item">
+            <div class="skill-head"><span class="skill-name">JavaScript</span><span class="skill-pct">70%</span></div>
+            <div class="skill-bar">
+              <div class="skill-fill" data-w="70"></div>
+            </div>
+          </div>
+          <div class="skill-item">
+            <div class="skill-head"><span class="skill-name">Figma / UI Design</span><span class="skill-pct">75%</span>
+            </div>
+            <div class="skill-bar">
+              <div class="skill-fill" data-w="75"></div>
+            </div>
+          </div>
+          <div class="skill-item">
+            <div class="skill-head"><span class="skill-name">Responsive Design</span><span class="skill-pct">78%</span>
+            </div>
+            <div class="skill-bar">
+              <div class="skill-fill" data-w="78"></div>
+            </div>
+          </div>
+        </div>
+        <div class="skills-inner-title" style="margin-top:2.5rem;">
+          <span class="skills-inner-label">Project Management Skills</span>
+          <div class="skills-inner-line"></div>
+        </div>
+        <div class="skills-grid">
+          <div class="skill-item">
+            <div class="skill-head"><span class="skill-name">Agile / Scrum</span><span class="skill-pct">76%</span>
+            </div>
+            <div class="skill-bar">
+              <div class="skill-fill" data-w="76"></div>
+            </div>
+          </div>
+          <div class="skill-item">
+            <div class="skill-head"><span class="skill-name">Team Leadership</span><span class="skill-pct">80%</span>
+            </div>
+            <div class="skill-bar">
+              <div class="skill-fill" data-w="80"></div>
+            </div>
+          </div>
+          <div class="skill-item">
+            <div class="skill-head"><span class="skill-name">Risk &amp; Scope Planning</span><span
+                class="skill-pct">68%</span></div>
+            <div class="skill-bar">
+              <div class="skill-fill" data-w="68"></div>
+            </div>
+          </div>
+          <div class="skill-item">
+            <div class="skill-head"><span class="skill-name">Documentation</span><span class="skill-pct">82%</span>
+            </div>
+            <div class="skill-bar">
+              <div class="skill-fill" data-w="82"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- CREDENTIALS & ACHIEVEMENTS -->
+      <div class="achieve-section">
+        <div class="skills-inner-title" style="margin-bottom:2.5rem;">
+          <span class="skills-inner-label">Credentials &amp; Achievements</span>
+          <div class="skills-inner-line"></div>
+        </div>
+
+        <!-- STAT NUMBERS -->
+        <div class="achieve-stats">
+          <div class="achieve-stat">
+            <div class="achieve-num" data-target="4" data-suffix="+">0+</div>
+            <div class="achieve-stat-label">Years of Study</div>
+          </div>
+          <div class="achieve-stat">
+            <div class="achieve-num" data-target="6" data-suffix="+">0+</div>
+            <div class="achieve-stat-label">Projects Shipped</div>
+          </div>
+          <div class="achieve-stat">
+            <div class="achieve-num" data-target="3" data-suffix="x">0x</div>
+            <div class="achieve-stat-label">Dean's Lister</div>
+          </div>
+          <div class="achieve-stat">
+            <div class="achieve-num" data-target="1" data-suffix="">0</div>
+            <div class="achieve-stat-label">Capstone PM Lead</div>
+          </div>
+        </div>
+
+        <!-- ACHIEVEMENT CARDS with image slots -->
+        <div class="achieve-grid">
+
+          <div class="achieve-card">
+            <div class="achieve-card-img-wrap">
+              <!-- Replace src with actual certificate/award image -->
+              <div class="achieve-img-placeholder">
+                <i class="fas fa-award"></i>
+                <span>Upload Image</span>
+              </div>
+              <!-- Uncomment and use: <img src="assets/cert-honor.jpg" alt="With Honors"> -->
+            </div>
+            <div class="achieve-card-body">
+              <div class="achieve-card-badge"><i class="fas fa-star"></i> Academic</div>
+              <h4>Graduated with High Honors</h4>
+              <p>Completed Senior High School under the GAS Strand with recognition for academic excellence and
+                consistent performance.</p>
+              <div class="achieve-card-year">2021</div>
+            </div>
+          </div>
+
+          <div class="achieve-card">
+            <div class="achieve-card-img-wrap">
+              <div class="achieve-img-placeholder">
+                <i class="fas fa-list-check"></i>
+                <span>Upload Image</span>
+              </div>
+            </div>
+            <div class="achieve-card-body">
+              <div class="achieve-card-badge"><i class="fas fa-diagram-project"></i> Leadership</div>
+              <h4>Capstone Project Manager</h4>
+              <p>Led a full development team through the entire software lifecycle — from requirements gathering and
+                sprint planning to final deployment.</p>
+              <div class="achieve-card-year">2024</div>
+            </div>
+          </div>
+
+          <div class="achieve-card">
+            <div class="achieve-card-img-wrap">
+              <div class="achieve-img-placeholder">
+                <i class="fas fa-briefcase"></i>
+                <span>Upload Image</span>
+              </div>
+            </div>
+            <div class="achieve-card-body">
+              <div class="achieve-card-badge"><i class="fas fa-building"></i> Experience</div>
+              <h4>IT Internship Completion</h4>
+              <p>Successfully completed on-the-job training with real-world exposure to software workflows, technical
+                documentation, and team collaboration.</p>
+              <div class="achieve-card-year">2023</div>
+            </div>
+          </div>
+
+          <div class="achieve-card">
+            <div class="achieve-card-img-wrap">
+              <div class="achieve-img-placeholder">
+                <i class="fas fa-book-open"></i>
+                <span>Upload Image</span>
+              </div>
+            </div>
+            <div class="achieve-card-body">
+              <div class="achieve-card-badge"><i class="fas fa-graduation-cap"></i> Academic</div>
+              <h4>Dean's List — Multiple Semesters</h4>
+              <p>Recognized on the Dean's List across multiple semesters at PUP for maintaining consistent academic
+                standing in BS Information Technology.</p>
+              <div class="achieve-card-year">2022–2024</div>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- TOOLS & CERTIFICATIONS ROW -->
+        <div class="tools-row">
+          <div class="skills-inner-title" style="margin-bottom:2rem;">
+            <span class="skills-inner-label">Tools &amp; Platforms I Work With</span>
+            <div class="skills-inner-line"></div>
+          </div>
+          <div class="tools-grid">
+            <div class="tool-pill"><i class="fab fa-figma"></i> Figma</div>
+            <div class="tool-pill"><i class="fab fa-github"></i> GitHub</div>
+            <div class="tool-pill"><i class="fab fa-js"></i> JavaScript</div>
+            <div class="tool-pill"><i class="fab fa-react"></i> React</div>
+            <div class="tool-pill"><i class="fab fa-php"></i> PHP</div>
+            <div class="tool-pill"><i class="fas fa-database"></i> MySQL</div>
+            <div class="tool-pill"><i class="fas fa-check-double"></i> Jira</div>
+            <div class="tool-pill"><i class="fab fa-trello"></i> Trello</div>
+            <div class="tool-pill"><i class="fas fa-leaf"></i> Leaflet.js</div>
+            <div class="tool-pill"><i class="fas fa-layer-group"></i> MVC</div>
+            <div class="tool-pill"><i class="fas fa-rotate"></i> Agile/Scrum</div>
+            <div class="tool-pill"><i class="fas fa-file-code"></i> VS Code</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ── CONTACT ── -->
+  <div class="section" id="contact">
+    <div class="sec-wrap">
+      <div class="sec-title">
+        <div class="eyebrow-bar">
+          <div class="eyebrow-tick"></div>
+          <span class="eyebrow-num-label">04</span>
+          <div class="eyebrow-line"></div>
+          <span class="eyebrow-tag">Let's Talk</span>
+        </div>
+        <h2>Say <em>Hello</em></h2>
+      </div>
+      <div class="contact-grid">
+        <div>
+          <p style="font-size:0.92rem;line-height:1.9;color:rgba(250,248,245,0.6);margin-bottom:0;">
+            Looking for a project manager who can also build the frontend? Or a front-end developer who understands
+            timelines, scope, and people? That's exactly where I thrive. Let's talk.
+          </p>
+          <div class="contact-info-list">
+            <div class="contact-info-item">
+              <div class="ci-icon"><i class="fas fa-map-marker-alt"></i></div>
+              <div>
+                <div class="ci-text-label">Location</div>
+                <div class="ci-text-val">Tiaong, Quezon, Philippines</div>
+              </div>
+            </div>
+            <div class="contact-info-item">
+              <div class="ci-icon"><i class="fas fa-envelope"></i></div>
+              <div>
+                <div class="ci-text-label">Email</div>
+                <div class="ci-text-val"><a href="/cdn-cgi/l/email-protection" class="__cf_email__"
+                    data-cfemail="33505c5f56565d1d5a405f564073565e525a5f1d505c5e">[email&#160;protected]</a></div>
+              </div>
+            </div>
+            <div class="contact-info-item">
+              <div class="ci-icon"><i class="fas fa-phone"></i></div>
+              <div>
+                <div class="ci-text-label">Mobile</div>
+                <div class="ci-text-val">+63 9XX XXX XXXX</div>
+              </div>
+            </div>
+            <div class="contact-info-item">
+              <div class="ci-icon"><i class="fas fa-language"></i></div>
+              <div>
+                <div class="ci-text-label">Languages</div>
+                <div class="ci-text-val">English, Filipino</div>
+              </div>
+            </div>
+          </div>
+          <div class="social-links">
+            <a href="#" class="social-link" title="Facebook"><i class="fab fa-facebook-f"></i></a>
+            <a href="#" class="social-link" title="GitHub"><i class="fab fa-github"></i></a>
+            <a href="#" class="social-link" title="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+            <a href="#" class="social-link" title="Twitter"><i class="fab fa-twitter"></i></a>
+          </div>
+        </div>
+
+        <div class="contact-form-wrap">
+          <form id="contactForm">
+            <div class="form-row">
+              <div class="form-group">
+                <label>Your Name</label>
+                <input type="text" id="from_name" name="from_name" placeholder="e.g. John Doe" required>
+              </div>
+              <div class="form-group">
+                <label>Your Email</label>
+                <input type="email" id="from_email" name="from_email" placeholder="email@example.com" required>
+              </div>
+            </div>
+            <div class="form-group">
+              <label>Subject</label>
+              <select id="subject" name="subject">
+                <option value="">Select a topic...</option>
+                <option>Project Management Role</option>
+                <option>Front-End Development Role</option>
+                <option>Internship Opportunity</option>
+                <option>Freelance / Contract Work</option>
+                <option>Collaboration</option>
+                <option>Other</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label>Message</label>
+              <textarea id="message" name="message" rows="5"
+                placeholder="Tell me about your project or opportunity..."></textarea>
+            </div>
+            <button type="submit" class="form-submit" id="submitBtn">
+              <i class="fas fa-paper-plane"></i> Send Message
+            </button>
+          </form>
+          <div class="form-success" id="formSuccess">
+            <i class="fas fa-circle-check"></i>
+            <h3 style="margin-bottom:0.5rem;">Message Sent!</h3>
+            <p>Thanks for reaching out. I'll get back to you soon.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Back to top -->
+  <div class="scroll-top" id="scrollTop" title="Back to Top">
+    <svg class="btn-ring" viewBox="0 0 54 54" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <circle cx="27" cy="27" r="24" stroke="rgba(167,139,250,0.35)" stroke-width="1.5" stroke-dasharray="6 4"
+        stroke-linecap="round" />
+      <circle cx="27" cy="27" r="24" stroke="url(#arcGrad)" stroke-width="2" stroke-dasharray="40 111"
+        stroke-dashoffset="-10" stroke-linecap="round" />
+      <defs>
+        <linearGradient id="arcGrad" x1="0" y1="0" x2="54" y2="54" gradientUnits="userSpaceOnUse">
+          <stop offset="0%" stop-color="#a78bfa" />
+          <stop offset="100%" stop-color="#f472b6" />
+        </linearGradient>
+      </defs>
+    </svg>
+    <div class="btn-disc"><i class="fas fa-arrow-up"></i></div>
+  </div>
+
+  <script src="script.js"></script>
 </body>
+
 </html>

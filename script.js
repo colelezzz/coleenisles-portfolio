@@ -279,11 +279,6 @@ document.querySelectorAll('.port-filter-btn').forEach(btn => {
 });
 
 // ── EMAILJS SETUP ──
-// STEP 1: Go to https://www.emailjs.com and create a free account
-// STEP 2: Add a service (connect your Gmail: islesleen@gmail.com) → copy the Service ID
-// STEP 3: Create an email template with these variables: {{from_name}}, {{from_email}}, {{subject}}, {{message}} → copy the Template ID
-// STEP 4: Go to Account → API Keys → copy your Public Key
-// STEP 5: Replace the three placeholder values below with your actual IDs
 
 const EMAILJS_PUBLIC_KEY  = 'VIkQ22U3mSZvyunaz';
 const EMAILJS_SERVICE_ID  = 'service_09xvphh';
@@ -333,17 +328,18 @@ document.getElementById('contactForm').addEventListener('submit', function(e) {
 const scrollTopBtn = document.getElementById('scrollTop');
 
 function updateScrollBtn(id) {
-  // hide on home section regardless
-  if (id === 'home') {
-    scrollTopBtn.classList.remove('show');
-    return;
-  }
+  // just trigger a scroll check whenever section changes
+  setTimeout(() => {
+    if (window.scrollY > 200) {
+      scrollTopBtn.classList.add('show');
+    } else {
+      scrollTopBtn.classList.remove('show');
+    }
+  }, 50);
 }
 
 window.addEventListener('scroll', () => {
-  const activeSection = document.querySelector('.section.active');
-  const isHome = activeSection && activeSection.id === 'home';
-  if (!isHome && window.scrollY > 200) {
+  if (window.scrollY > 200) {
     scrollTopBtn.classList.add('show');
   } else {
     scrollTopBtn.classList.remove('show');

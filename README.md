@@ -1,25 +1,49 @@
-# Coleen Isles — Portfolio
+<a id="readme-top"></a>
 
-> Personal portfolio of **Marifiel Coleen L. Isles**, an aspiring Project Manager & Front-End Developer finishing her BS Information Technology degree at PUP Sto. Tomas Campus (2026).
+<div align="center">
+
+  <h3>Coleen Isles — Personal Portfolio</h3>
+
+  <p><em>Where structure meets creativity — built by someone who manages the plan and writes the code.</em></p>
+
+  [![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white)](https://developer.mozilla.org/en-US/docs/Web/HTML)
+  [![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white)](https://developer.mozilla.org/en-US/docs/Web/CSS)
+  [![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
+  [![EmailJS](https://img.shields.io/badge/EmailJS-EA4335?style=for-the-badge&logo=gmail&logoColor=white)](https://www.emailjs.com/)
+
+  <br/>
+
+  <a href="#-getting-started">Get Started</a> &nbsp;·&nbsp;
+  <a href="#-features">Features</a> &nbsp;·&nbsp;
+  <a href="#-contact">Contact</a>
+
+</div>
 
 ---
 
-## 🔗 Live Preview
+## 👋 Hey there!
 
-> Deploy via **GitHub Pages**, **Netlify**, or **Vercel** — drop the three files in a repo and you're live.
+This is the source code for my **personal portfolio** — a place I built from scratch to show who I am, what I do, and how I think.
+
+I'm **Marifiel Coleen L. Isles**, a 4th-year BS Information Technology student at **PUP Sto. Tomas Campus**, graduating 2026. I live at the intersection of **project management** and **front-end development** — I help teams stay organized *and* build the interfaces they ship.
+
+This portfolio reflects exactly that: thoughtful structure, clean code, and just enough flair to make it memorable. ✨
 
 ---
 
-## ✨ Features
+## ✦ Features
 
-- **Animated particle mesh** background with interactive mouse tracking
-- **Custom comet-trail cursor** with click burst effect (desktop only)
-- **Single-page section switching** — smooth fade transitions, no page reloads
-- **Skill bar animations** and **achievement counter** on scroll
-- **Portfolio filter** — browse projects by category
-- **Contact form** powered by [EmailJS](https://www.emailjs.com/) — no backend needed
-- **Responsive** — bottom nav for mobile, top nav for desktop
-- **Scroll-to-top** button with animated ring
+Things I'm especially proud of:
+
+| Feature | What it does |
+|---|---|
+| 🌌 **Particle mesh background** | 120 animated particles with glowing orbs and connecting lines — all on `<canvas>` |
+| 🌠 **Comet-trail cursor** | A custom cursor that leaves a glowing trail and bursts on click (desktop only) |
+| ⚡ **Zero-reload navigation** | Sections fade in and out smoothly — feels like an app, not a webpage |
+| 📊 **Animated skill bars** | Bars fill with a satisfying sweep when you land on the Skills section |
+| 🗂 **Portfolio filter** | Browse projects by category with animated card transitions |
+| 📬 **Working contact form** | Powered by EmailJS — messages land straight in my inbox, no backend needed |
+| 📱 **Mobile-ready** | Bottom navigation bar on mobile, top nav on desktop |
 
 ---
 
@@ -27,65 +51,80 @@
 
 ```
 portfolio/
-├── index.html          # Markup & all sections (Home, About, Projects, Skills, Contact)
-├── style.css           # All styling — dark theme, animations, responsive layout
-├── script.js           # Canvas animations, nav logic, EmailJS, portfolio filter
+├── index.html          ← All five sections live here (Home, About, Projects, Skills, Contact)
+├── style.css           ← Dark theme, animations, responsive layout — all in one file
+├── script.js           ← Canvas magic, nav logic, EmailJS, portfolio filter
 └── assets/
     ├── images/
-    │   ├── portfolioLogo.png
-    │   └── image1.png          # Profile photo
+    │   ├── portfolioLogo.png   ← Tab icon + nav logo
+    │   └── image1.png          ← Profile photo
     └── files/
-        └── IslesCV.pdf         # Downloadable CV
+        └── IslesCV.pdf         ← Downloadable CV
 ```
+
+> **No frameworks. No build tools. No node_modules.** Just open `index.html` and go. 🚀
 
 ---
 
 ## 🚀 Getting Started
 
-**No build tools or dependencies required** — just open `index.html` in a browser.
+### 1 — Clone it
 
 ```bash
 git clone https://github.com/your-username/portfolio.git
 cd portfolio
-# Open index.html directly, or use Live Server in VS Code
 ```
 
-### Setting Up the Contact Form (EmailJS)
+Then open `index.html` in your browser — or use **Live Server** in VS Code for hot reload.
 
-1. Create a free account at [emailjs.com](https://www.emailjs.com/)
-2. Add an **Email Service** and note the **Service ID**
-3. Create an **Email Template** and note the **Template ID**
-4. Copy your **Public Key** from Account → API Keys
-5. Open `script.js` and fill in:
+### 2 — Set up the contact form
+
+The form uses [EmailJS](https://www.emailjs.com/) so you receive messages without any server. Here's the quick setup:
+
+1. Sign up free at [emailjs.com](https://www.emailjs.com/)
+2. Create an **Email Service** → grab the **Service ID**
+3. Create an **Email Template** → grab the **Template ID**
+4. Go to **Account → API Keys** → copy your **Public Key**
+5. Open `script.js` and plug them in:
 
 ```js
-const EMAILJS_PUBLIC_KEY  = 'YOUR_PUBLIC_KEY';
-const EMAILJS_SERVICE_ID  = 'YOUR_SERVICE_ID';
-const EMAILJS_TEMPLATE_ID = 'YOUR_TEMPLATE_ID';
+const EMAILJS_PUBLIC_KEY  = 'your_key_here';
+const EMAILJS_SERVICE_ID  = 'your_service_id_here';
+const EMAILJS_TEMPLATE_ID = 'your_template_id_here';
 ```
+
+Done! 🎉
 
 ---
 
 ## 🛠 Built With
 
-[![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white)](https://developer.mozilla.org/en-US/docs/Web/HTML)
-[![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white)](https://developer.mozilla.org/en-US/docs/Web/CSS)
-[![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
-[![EmailJS](https://img.shields.io/badge/EmailJS-EA4335?style=for-the-badge&logo=gmail&logoColor=white)](https://www.emailjs.com/)
-[![Font Awesome](https://img.shields.io/badge/Font_Awesome-528DD7?style=for-the-badge&logo=fontawesome&logoColor=white)](https://fontawesome.com/)
+- **HTML5** — semantic structure, single-page architecture
+- **CSS3** — custom properties, keyframe animations, responsive grid & flex
+- **Vanilla JavaScript** — Canvas API, DOM manipulation, event-driven navigation
+- **EmailJS** — serverless contact form delivery
+- **Font Awesome 6** — icons throughout the UI
+- **Google Fonts** — DM Serif Display + DM Sans
 
 ---
 
 ## 📬 Contact
 
+Got an opportunity, a project, or just want to say hi?
+
 **Marifiel Coleen L. Isles**
 📍 Tiaong, Quezon, Philippines
 📧 islesleen@gmail.com
 
-[![GitHub](https://img.shields.io/badge/GitHub-colelezzz-181717?style=flat-square&logo=github)](https://github.com/colelezzz)
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-coleen--isles-0A66C2?style=flat-square&logo=linkedin)](https://www.linkedin.com/in/coleen-isles-17o4o611)
-[![Facebook](https://img.shields.io/badge/Facebook-coleen.isles-1877F2?style=flat-square&logo=facebook)](https://www.facebook.com/coleen.isles)
+[![GitHub](https://img.shields.io/badge/GitHub-colelezzz-181717?style=flat-square&logo=github&logoColor=white)](https://github.com/colelezzz)
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-coleen--isles-0A66C2?style=flat-square&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/coleen-isles-17o4o611)
+[![Facebook](https://img.shields.io/badge/Facebook-coleen.isles-1877F2?style=flat-square&logo=facebook&logoColor=white)](https://www.facebook.com/coleen.isles)
+[![X / Twitter](https://img.shields.io/badge/X-coleenislesss-000000?style=flat-square&logo=x&logoColor=white)](https://x.com/coleenislesss?s=21)
 
 ---
+
+<div align="center">
+  <sub>Designed & developed with 💜 by Coleen Isles · 2026</sub>
+</div>
 
 <p align="right"><a href="#readme-top">↑ back to top</a></p>

@@ -6,13 +6,6 @@
 
   <p><em>Where structure meets creativity — built by someone who manages the plan and writes the code.</em></p>
 
-  [![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white)](https://developer.mozilla.org/en-US/docs/Web/HTML)
-  [![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white)](https://developer.mozilla.org/en-US/docs/Web/CSS)
-  [![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
-  [![EmailJS](https://img.shields.io/badge/EmailJS-EA4335?style=for-the-badge&logo=gmail&logoColor=white)](https://www.emailjs.com/)
-
-  <br/>
-
   <a href="#-getting-started">Get Started</a> &nbsp;·&nbsp;
   <a href="#-features">Features</a> &nbsp;·&nbsp;
   <a href="#-contact">Contact</a>
@@ -33,17 +26,12 @@ This portfolio reflects exactly that: thoughtful structure, clean code, and just
 
 ## ✦ Features
 
-Things I'm especially proud of:
-
-| Feature | What it does |
-|---|---|
-| 🌌 **Particle mesh background** | 120 animated particles with glowing orbs and connecting lines — all on `<canvas>` |
-| 🌠 **Comet-trail cursor** | A custom cursor that leaves a glowing trail and bursts on click (desktop only) |
-| ⚡ **Zero-reload navigation** | Sections fade in and out smoothly — feels like an app, not a webpage |
-| 📊 **Animated skill bars** | Bars fill with a satisfying sweep when you land on the Skills section |
-| 🗂 **Portfolio filter** | Browse projects by category with animated card transitions |
-| 📬 **Working contact form** | Powered by EmailJS — messages land straight in my inbox, no backend needed |
-| 📱 **Mobile-ready** | Bottom navigation bar on mobile, top nav on desktop |
+- 🌌 **Animated particle mesh** background with glowing orbs — built on `<canvas>`
+- 🌠 **Comet-trail cursor** with click burst effect *(desktop only)*
+- ⚡ **Smooth section switching** — no page reloads, just clean fades
+- 🗂 **Portfolio filter**, animated skill bars, and achievement counters
+- 📬 **Working contact form** via EmailJS — no backend needed
+- 📱 **Fully responsive** — bottom nav on mobile, top nav on desktop
 
 ---
 
@@ -79,7 +67,7 @@ Then open `index.html` in your browser — or use **Live Server** in VS Code for
 
 ### 2 — Set up the contact form
 
-The form uses [EmailJS](https://www.emailjs.com/) so you receive messages without any server. Here's the quick setup:
+The form uses [EmailJS](https://www.emailjs.com/) so you receive messages without any server. Quick setup:
 
 1. Sign up free at [emailjs.com](https://www.emailjs.com/)
 2. Create an **Email Service** → grab the **Service ID**
@@ -99,12 +87,16 @@ Done! 🎉
 
 ## 🛠 Built With
 
-- **HTML5** — semantic structure, single-page architecture
-- **CSS3** — custom properties, keyframe animations, responsive grid & flex
-- **Vanilla JavaScript** — Canvas API, DOM manipulation, event-driven navigation
-- **EmailJS** — serverless contact form delivery
-- **Font Awesome 6** — icons throughout the UI
-- **Google Fonts** — DM Serif Display + DM Sans
+Intentionally **vanilla** — no React, no Tailwind, no bundlers. Just the fundamentals, done well.
+
+| | Technology | Purpose |
+|---|---|---|
+| [![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white)](https://developer.mozilla.org/en-US/docs/Web/HTML) | **HTML5** | Semantic structure, single-page architecture |
+| [![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white)](https://developer.mozilla.org/en-US/docs/Web/CSS) | **CSS3** | Custom properties, keyframe animations, responsive grid & flex |
+| [![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)](https://developer.mozilla.org/en-US/docs/Web/JavaScript) | **Vanilla JavaScript** | Canvas API, DOM manipulation, event-driven navigation |
+| [![EmailJS](https://img.shields.io/badge/EmailJS-EA4335?style=for-the-badge&logo=gmail&logoColor=white)](https://www.emailjs.com/) | **EmailJS** | Serverless contact form delivery |
+| [![FontAwesome](https://img.shields.io/badge/Font_Awesome-528DD7?style=for-the-badge&logo=fontawesome&logoColor=white)](https://fontawesome.com/) | **Font Awesome 6** | Icons throughout the UI |
+| [![Google Fonts](https://img.shields.io/badge/Google_Fonts-4285F4?style=for-the-badge&logo=google&logoColor=white)](https://fonts.google.com/) | **Google Fonts** | DM Serif Display + DM Sans |
 
 ---
 
@@ -124,7 +116,7 @@ Got an opportunity, a project, or just want to say hi?
 ---
 
 <div align="center">
-  <sub>Designed & developed with 💜 by Coleen Isles · 2026</sub>
+  <sub>Designed & developed with 💜 by Coleen Isles · PUP STC · 2026</sub>
 </div>
 
 <p align="right"><a href="#readme-top">↑ back to top</a></p>

@@ -6,6 +6,13 @@
 
   <p><em>Where structure meets creativity — built by someone who manages the plan and writes the code.</em></p>
 
+  [![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white)](https://developer.mozilla.org/en-US/docs/Web/HTML)
+  [![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white)](https://developer.mozilla.org/en-US/docs/Web/CSS)
+  [![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
+  [![EmailJS](https://img.shields.io/badge/EmailJS-EA4335?style=for-the-badge&logo=gmail&logoColor=white)](https://www.emailjs.com/)
+  [![Font Awesome](https://img.shields.io/badge/Font_Awesome-528DD7?style=for-the-badge&logo=fontawesome&logoColor=white)](https://fontawesome.com/)
+  [![Google Fonts](https://img.shields.io/badge/Google_Fonts-4285F4?style=for-the-badge&logo=google&logoColor=white)](https://fonts.google.com/)
+
   <a href="#-getting-started">Get Started</a> &nbsp;·&nbsp;
   <a href="#-features">Features</a> &nbsp;·&nbsp;
   <a href="#-contact">Contact</a>
@@ -26,12 +33,15 @@ This portfolio reflects exactly that: thoughtful structure, clean code, and just
 
 ## ✦ Features
 
-- 🌌 **Animated particle mesh** background with glowing orbs — built on `<canvas>`
-- 🌠 **Comet-trail cursor** with click burst effect *(desktop only)*
-- ⚡ **Smooth section switching** — no page reloads, just clean fades
-- 🗂 **Portfolio filter**, animated skill bars, and achievement counters
-- 📬 **Working contact form** via EmailJS — no backend needed
-- 📱 **Fully responsive** — bottom nav on mobile, top nav on desktop
+| | Feature | Description |
+|---|---|---|
+| 🌌 | **Particle mesh background** | Animated particles with glowing orbs and connecting lines — all on `<canvas>` |
+| 🌠 | **Comet-trail cursor** | Glowing trail + click burst effect *(desktop only)* |
+| ⚡ | **Smooth section switching** | Fade transitions between sections — no page reloads |
+| 🗂 | **Portfolio filter** | Browse projects by category with animated card transitions |
+| 📊 | **Animated skill bars** | Bars sweep in when you land on the Skills section |
+| 📬 | **Working contact form** | Powered by EmailJS — lands straight in my inbox, no backend needed |
+| 📱 | **Fully responsive** | Bottom nav on mobile, top nav on desktop |
 
 ---
 
@@ -59,11 +69,10 @@ portfolio/
 ### 1 — Clone it
 
 ```bash
-git clone https://github.com/your-username/portfolio.git
-cd portfolio
+git clone https://github.com/colelezzz/coleenisles-portfolio.git
 ```
 
-Then open `index.html` in your browser — or use **Live Server** in VS Code for hot reload.
+Then just open `index.html` in your browser — or use **Live Server** in VS Code for hot reload.
 
 ### 2 — Set up the contact form
 
@@ -85,18 +94,9 @@ Done! 🎉
 
 ---
 
-## 🛠 Built With
+## 📄 License
 
-Intentionally **vanilla** — no React, no Tailwind, no bundlers. Just the fundamentals, done well.
-
-| | Technology | Purpose |
-|---|---|---|
-| [![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white)](https://developer.mozilla.org/en-US/docs/Web/HTML) | **HTML5** | Semantic structure, single-page architecture |
-| [![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white)](https://developer.mozilla.org/en-US/docs/Web/CSS) | **CSS3** | Custom properties, keyframe animations, responsive grid & flex |
-| [![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)](https://developer.mozilla.org/en-US/docs/Web/JavaScript) | **Vanilla JavaScript** | Canvas API, DOM manipulation, event-driven navigation |
-| [![EmailJS](https://img.shields.io/badge/EmailJS-EA4335?style=for-the-badge&logo=gmail&logoColor=white)](https://www.emailjs.com/) | **EmailJS** | Serverless contact form delivery |
-| [![FontAwesome](https://img.shields.io/badge/Font_Awesome-528DD7?style=for-the-badge&logo=fontawesome&logoColor=white)](https://fontawesome.com/) | **Font Awesome 6** | Icons throughout the UI |
-| [![Google Fonts](https://img.shields.io/badge/Google_Fonts-4285F4?style=for-the-badge&logo=google&logoColor=white)](https://fonts.google.com/) | **Google Fonts** | DM Serif Display + DM Sans |
+This project is open source under the [MIT License](LICENSE) — you're free to use it as a reference or inspiration for your own portfolio. However, **please do not copy and deploy it as your own** without significant changes. If you found this helpful, a credit or a ⭐ on the repo would be very much appreciated!
 
 ---
 

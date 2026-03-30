@@ -116,7 +116,7 @@ Got an opportunity, a project, or just want to say hi?
 ---
 
 <div align="center">
-  <sub>Designed & developed with 💜 by Coleen Isles · PUP STC · 2026</sub>
+  <sub>Designed & developed with 💜 by Coleen Isles · 2026</sub>
 </div>
 
 <p align="right"><a href="#readme-top">↑ back to top</a></p>

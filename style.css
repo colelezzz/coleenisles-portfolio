@@ -553,16 +553,28 @@ body::after {
 }
 .faq-icon svg { width: 10px; height: 10px; }
 .faq-item.open .faq-icon { background: rgba(124,58,237,0.22); transform: rotate(180deg); }
+
+/* ── FAQ answer wrapper — JS sets max-height directly ── */
 .faq-a {
-  max-height: 0; overflow: hidden;
-  transition: max-height 0.4s cubic-bezier(0.4,0,0.2,1), padding 0.3s;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.4s cubic-bezier(0.4, 0, 0.2, 1);
   padding: 0 1.4rem;
 }
-.faq-item.open .faq-a { max-height: 300px; padding: 0 1.4rem 1.2rem; }
-.faq-a p {
-  font-size: 0.84rem; line-height: 1.85; color: rgba(250,248,245,0.6);
-  margin: 0; border-top: 1px solid rgba(255,255,255,0.05); padding-top: 0.9rem;
+
+/* ── Inner wrapper handles all spacing & border — no animation conflicts ── */
+.faq-a-inner {
+  padding: 0.9rem 0 1.8rem;
+  border-top: 1px solid rgba(255,255,255,0.05);
 }
+
+.faq-a-inner p {
+  font-size: 0.84rem;
+  line-height: 1.85;
+  color: rgba(250,248,245,0.6);
+  margin: 0;
+}
+
 .faq-tag {
   display: inline-block; font-size: 0.6rem; letter-spacing: 0.12em;
   text-transform: uppercase; padding: 2px 8px; border-radius: 20px;
@@ -758,20 +770,17 @@ body::after {
    RESPONSIVE BREAKPOINTS — ALL SCREEN SIZES
    ═══════════════════════════════════════════════ */
 
-/* ── Large desktop (1280px+) ── */
 @media (min-width: 1280px) {
   .home-wrap { padding: 7rem 5rem 3rem; }
   .sec-wrap { padding: 8rem 5rem 5rem; }
 }
 
-/* ── Extra large (1600px+) ── */
 @media (min-width: 1600px) {
   .home-wrap { padding: 7rem 6rem 3rem; max-width: 1600px; }
   .sec-wrap { padding: 8rem 6rem 5rem; max-width: 1600px; }
   .nav { padding: 1.4rem 6rem; }
 }
 
-/* ── Medium desktop / laptop (1025px–1280px) ── */
 @media (max-width: 1280px) and (min-width: 1025px) {
   .nav { padding: 1.2rem 2.5rem; }
   .home-wrap { padding: 7rem 2.5rem 3rem; gap: 3rem; }
@@ -781,7 +790,6 @@ body::after {
   .services-grid { grid-template-columns: repeat(3, 1fr); }
 }
 
-/* ── Tablet landscape / small desktop (769px–1024px) ── */
 @media (max-width: 1024px) {
   .nav { padding: 1.2rem 2rem; }
   .home-wrap { padding: 7rem 2rem 3rem; gap: 2.5rem; }
@@ -795,7 +803,6 @@ body::after {
   .img-label { right: -2rem; font-size: 0.55rem; }
 }
 
-/* ── Tablet portrait (601px–768px) ── */
 @media (max-width: 768px) {
   .nav { display: none; }
   .bottom-nav { display: flex; }
@@ -827,7 +834,6 @@ body::after {
   .scroll-top { bottom: calc(5.5rem + env(safe-area-inset-bottom)); right: 1rem; width: 46px; height: 46px; }
 }
 
-/* ── Large phones (481px–600px) ── */
 @media (max-width: 600px) {
   .home-wrap { padding: 4.5rem 1.2rem 6rem; gap: 1.8rem; }
   .sec-wrap { padding: 4.5rem 1.2rem 6rem; }
@@ -840,7 +846,6 @@ body::after {
   .contact-form-wrap { padding: 1.8rem; }
 }
 
-/* ── Standard phones (361px–480px) ── */
 @media (max-width: 480px) {
   .home-wrap { padding: 4.5rem 1rem 6rem; }
   .sec-wrap { padding: 4.5rem 1rem 6rem; }
@@ -864,7 +869,6 @@ body::after {
   .sec-title h2 { font-size: clamp(1.8rem, 8vw, 2.2rem); }
 }
 
-/* ── Small phones (320px–360px) ── */
 @media (max-width: 360px) {
   .home-wrap { padding: 4rem 0.85rem 6rem; }
   .sec-wrap { padding: 4rem 0.85rem 6rem; }
@@ -889,7 +893,6 @@ body::after {
   .bottom-nav-btn span { font-size: 0.5rem; }
 }
 
-/* ── Galaxy Z Fold — cover screen (280px–344px narrow folded) ── */
 @media (max-width: 344px) {
   :root { --transition: all 0.3s ease; }
 
@@ -916,7 +919,6 @@ body::after {
   .eyebrow-tag { font-size: 0.58rem; padding: 3px 9px; }
   .eyebrow-tick { height: 22px; }
 
-  /* About */
   .about-text p { font-size: 0.82rem; line-height: 1.8; }
   .about-cards { grid-template-columns: 1fr; gap: 0.6rem; }
   .about-card { padding: 1rem; }
@@ -926,21 +928,18 @@ body::after {
 
   .tech-tag { font-size: 0.65rem; padding: 0.28rem 0.7rem; }
 
-  /* Hobbies */
   .hobbies-grid { grid-template-columns: 1fr; gap: 0.7rem; }
   .hobby-card { padding: 1rem 0.9rem; }
   .hobby-emoji { font-size: 1.4rem; }
   .hobby-name { font-size: 0.82rem; }
   .hobby-desc { font-size: 0.72rem; }
 
-  /* Timeline */
   .timeline { grid-template-columns: 1fr; gap: 0.8rem; }
   .tl-item { padding: 1.1rem; }
   .tl-icon-wrap { width: 32px; height: 32px; border-radius: 9px; }
   .tl-item h5 { font-size: 0.82rem; }
   .tl-item p { font-size: 0.75rem; }
 
-  /* Portfolio */
   .port-filter { gap: 0.3rem; }
   .port-filter-btn { padding: 0.35rem 0.65rem; font-size: 0.62rem; }
   .port-grid { grid-template-columns: 1fr; gap: 1rem; }
@@ -948,18 +947,15 @@ body::after {
   .port-card-title { font-size: 0.88rem; }
   .port-card-desc { font-size: 0.72rem; }
 
-  /* Services */
   .services-grid { grid-template-columns: 1fr; gap: 0.8rem; }
   .service-card { padding: 1.2rem; }
   .service-icon { width: 42px; height: 42px; border-radius: 11px; font-size: 1.1rem; margin-bottom: 1rem; }
   .service-card h3 { font-size: 0.9rem; }
   .service-card p { font-size: 0.75rem; }
 
-  /* Skills */
   .skills-grid { grid-template-columns: 1fr; gap: 1rem; }
   .skill-name { font-size: 0.72rem; }
 
-  /* Achievements */
   .achieve-stats { grid-template-columns: 1fr 1fr; gap: 0.6rem; }
   .achieve-stat { padding: 1rem 0.7rem; border-radius: 14px; }
   .achieve-num { font-size: 1.8rem; }
@@ -969,12 +965,10 @@ body::after {
   .achieve-card-body h4 { font-size: 0.88rem; }
   .achieve-card-body p { font-size: 0.74rem; }
 
-  /* Tools */
   .tools-grid { gap: 0.5rem; }
   .tool-pill { padding: 0.35rem 0.65rem; font-size: 0.65rem; }
   .tool-pill i { font-size: 0.75rem; }
 
-  /* Contact */
   .contact-grid { gap: 1.5rem; }
   .contact-form-wrap { padding: 1rem; border-radius: 16px; }
   .form-group input, .form-group textarea, .form-group select {
@@ -985,7 +979,6 @@ body::after {
   .ci-text-val { font-size: 0.78rem; }
   .social-link { width: 36px; height: 36px; font-size: 0.88rem; border-radius: 10px; }
 
-  /* Bottom nav */
   .bottom-nav-btn { max-width: 55px; padding: 0.4rem; }
   .bottom-nav-btn i { font-size: 0.95rem; }
   .bottom-nav-btn span { font-size: 0.46rem; }
@@ -993,7 +986,6 @@ body::after {
   .scroll-top { width: 38px; height: 38px; right: 0.6rem; bottom: calc(5rem + env(safe-area-inset-bottom)); }
 }
 
-/* ── Galaxy Z Fold — inner screen unfolded (~717px wide, tall) ── */
 @media (min-width: 600px) and (max-width: 768px) {
   .nav { display: none; }
   .bottom-nav { display: flex; }
@@ -1024,7 +1016,6 @@ body::after {
   .scroll-top { bottom: calc(4.5rem + env(safe-area-inset-bottom)); right: 1rem; }
 }
 
-/* ── Foldable / split-screen: very short height ── */
 @media (max-height: 500px) and (orientation: landscape) {
   .home-wrap {
     grid-template-columns: 1fr 1fr;
@@ -1044,7 +1035,6 @@ body::after {
   .nav { display: none; }
 }
 
-/* ── Touch devices: remove hover transform on cards ── */
 @media (hover: none) {
   .about-card:hover,
   .hobby-card:hover,
@@ -1059,7 +1049,6 @@ body::after {
   .port-card:hover .port-card-overlay { opacity: 0; }
 }
 
-/* ── Accessibility: reduced motion ── */
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after {
     animation-duration: 0.01ms !important;

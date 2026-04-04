@@ -39,7 +39,7 @@ for (let i = 0; i < 120; i++) particles.push(new Particle());
 const orbs = [
   { x: 0.15, y: 0.2, r: 320, col: '124,58,237', a: 0.09 },
   { x: 0.85, y: 0.7, r: 260, col: '244,114,182', a: 0.07 },
-  { x: 0.5,  y: 0.5, r: 200, col: '167,139,250', a: 0.05 },
+  { x: 0.5, y: 0.5, r: 200, col: '167,139,250', a: 0.05 },
 ];
 
 function drawConnections() {
@@ -47,12 +47,12 @@ function drawConnections() {
     for (let j = i + 1; j < particles.length; j++) {
       const dx = particles[i].x - particles[j].x;
       const dy = particles[i].y - particles[j].y;
-      const dist = Math.sqrt(dx*dx + dy*dy);
+      const dist = Math.sqrt(dx * dx + dy * dy);
       if (dist < 100) {
         ctx.beginPath();
         ctx.moveTo(particles[i].x, particles[i].y);
         ctx.lineTo(particles[j].x, particles[j].y);
-        ctx.strokeStyle = `rgba(124,58,237,${0.06 * (1 - dist/100)})`;
+        ctx.strokeStyle = `rgba(124,58,237,${0.06 * (1 - dist / 100)})`;
         ctx.lineWidth = 0.5;
         ctx.stroke();
       }
@@ -63,7 +63,7 @@ function drawConnections() {
 function animate() {
   ctx.clearRect(0, 0, W, H);
   orbs.forEach(o => {
-    const grd = ctx.createRadialGradient(o.x*W, o.y*H, 0, o.x*W, o.y*H, o.r);
+    const grd = ctx.createRadialGradient(o.x * W, o.y * H, 0, o.x * W, o.y * H, o.r);
     grd.addColorStop(0, `rgba(${o.col},${o.a})`);
     grd.addColorStop(1, `rgba(${o.col},0)`);
     ctx.fillStyle = grd;
@@ -78,7 +78,7 @@ animate();
 window.addEventListener('mousemove', e => { mouseX = e.clientX; mouseY = e.clientY; });
 
 // ── COMET TRAIL CURSOR + CLICK EXPLOSION ──
-(function() {
+(function () {
   const isMobile = window.matchMedia('(hover: none)').matches;
   if (isMobile) return;
 
@@ -93,7 +93,7 @@ window.addEventListener('mousemove', e => { mouseX = e.clientX; mouseY = e.clien
 
   let mx = -200, my = -200;
   const TRAIL = 28;
-  const trail = Array.from({length: TRAIL}, () => ({ x: -200, y: -200, age: 0 }));
+  const trail = Array.from({ length: TRAIL }, () => ({ x: -200, y: -200, age: 0 }));
   let tIdx = 0;
   let colorT = 0;
 
@@ -136,9 +136,9 @@ window.addEventListener('mousemove', e => { mouseX = e.clientX; mouseY = e.clien
   });
 
   function lerpColor(t) {
-    const r = Math.round(167 + (244-167)*t);
-    const g = Math.round(139 + (114-139)*t);
-    const b = Math.round(250 + (182-250)*t);
+    const r = Math.round(167 + (244 - 167) * t);
+    const g = Math.round(139 + (114 - 139) * t);
+    const b = Math.round(250 + (182 - 250) * t);
     return `${r},${g},${b}`;
   }
 
@@ -234,7 +234,7 @@ function showSection(id) {
 }
 
 document.querySelectorAll('[data-id]').forEach(el => {
-  el.addEventListener('click', function(e) {
+  el.addEventListener('click', function (e) {
     const id = this.dataset.id;
     if (id) { e.preventDefault(); showSection(id); }
   });
@@ -263,7 +263,7 @@ function animateAchievements() {
 
 // ── PORTFOLIO FILTER ──
 document.querySelectorAll('.port-filter-btn').forEach(btn => {
-  btn.addEventListener('click', function() {
+  btn.addEventListener('click', function () {
     document.querySelectorAll('.port-filter-btn').forEach(b => b.classList.remove('active'));
     this.classList.add('active');
     const filter = this.dataset.filter;
@@ -280,19 +280,19 @@ document.querySelectorAll('.port-filter-btn').forEach(btn => {
 
 // ── EMAILJS SETUP ──
 
-const EMAILJS_PUBLIC_KEY  = 'VIkQ22U3mSZvyunaz';
-const EMAILJS_SERVICE_ID  = 'service_09xvphh';
+const EMAILJS_PUBLIC_KEY = 'VIkQ22U3mSZvyunaz';
+const EMAILJS_SERVICE_ID = 'service_09xvphh';
 const EMAILJS_TEMPLATE_ID = 'template_osryicp';
 
 emailjs.init(EMAILJS_PUBLIC_KEY);
 
 // ── CONTACT FORM ──
-document.getElementById('contactForm').addEventListener('submit', function(e) {
+document.getElementById('contactForm').addEventListener('submit', function (e) {
   e.preventDefault();
 
   const btn = document.getElementById('submitBtn');
-  const name    = document.getElementById('from_name').value.trim();
-  const email   = document.getElementById('from_email').value.trim();
+  const name = document.getElementById('from_name').value.trim();
+  const email = document.getElementById('from_email').value.trim();
   const subject = document.getElementById('subject').value || 'No subject selected';
   const message = document.getElementById('message').value.trim();
 
@@ -308,11 +308,11 @@ document.getElementById('contactForm').addEventListener('submit', function(e) {
   btn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Sending...';
 
   emailjs.send(EMAILJS_SERVICE_ID, EMAILJS_TEMPLATE_ID, {
-    from_name:  name,
+    from_name: name,
     from_email: email,
-    subject:    subject,
-    message:    message,
-    to_email:   'islesleen@gmail.com'
+    subject: subject,
+    message: message,
+    to_email: 'islesleen@gmail.com'
   }).then(() => {
     this.style.display = 'none';
     document.getElementById('formSuccess').style.display = 'block';
@@ -352,7 +352,7 @@ scrollTopBtn.addEventListener('click', () => {
 
 // ── SKILLS TAB TOGGLE (in services) ──
 document.querySelectorAll('.skill-tab-btn').forEach(btn => {
-  btn.addEventListener('click', function() {
+  btn.addEventListener('click', function () {
     const group = this.dataset.group;
     document.querySelectorAll('.skill-tab-btn').forEach(b => b.classList.remove('active'));
     this.classList.add('active');
@@ -369,12 +369,27 @@ document.querySelectorAll('.skill-tab-btn').forEach(btn => {
   });
 });
 
-// FAQ accordion
+// ── FAQ ACCORDION — smooth open & close ──
 document.querySelectorAll('.faq-q').forEach(btn => {
   btn.addEventListener('click', () => {
     const item = btn.closest('.faq-item');
+    const answer = item.querySelector('.faq-a');
     const isOpen = item.classList.contains('open');
-    document.querySelectorAll('.faq-item').forEach(i => i.classList.remove('open'));
-    if (!isOpen) item.classList.add('open');
+
+    // Close all open items smoothly
+    document.querySelectorAll('.faq-item.open').forEach(openItem => {
+      const openAnswer = openItem.querySelector('.faq-a');
+      // Set explicit height before collapsing so transition has a start point
+      openAnswer.style.maxHeight = openAnswer.scrollHeight + 'px';
+      openAnswer.getBoundingClientRect(); // force reflow
+      openAnswer.style.maxHeight = '0';
+      openItem.classList.remove('open');
+    });
+
+    // Open the clicked item if it was closed
+    if (!isOpen) {
+      item.classList.add('open');
+      answer.style.maxHeight = answer.scrollHeight + 'px';
+    }
   });
 });

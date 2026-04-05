@@ -564,7 +564,7 @@ body::after {
 
 /* ── Inner wrapper handles all spacing & border — no animation conflicts ── */
 .faq-a-inner {
-  padding: 0.9rem 0 1.8rem;
+  padding: 0.9rem 0 1rem;
   border-top: 1px solid rgba(255,255,255,0.05);
 }
 

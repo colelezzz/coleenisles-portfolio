@@ -753,7 +753,7 @@ body::after {
   align-items: center;
   gap: 0.2rem;
   width: auto;
-  min-width: min(92vw, 480px);
+  min-width: min(86vw, 460px);
   box-shadow: 0 8px 32px rgba(0,0,0,0.4), 0 0 0 1px rgba(167,139,250,0.06);
 }
 
@@ -824,7 +824,7 @@ body::after {
   .nav { display: none; }
   .bottom-nav {
     display: flex;
-    min-width: min(88vw, 540px);
+    min-width: min(82vw, 500px);
     padding: 0.55rem 1.2rem;
     gap: 0.25rem;
     bottom: calc(1rem + env(safe-area-inset-bottom));
@@ -862,7 +862,7 @@ body::after {
   .nav { display: none; }
   .bottom-nav {
     display: flex;
-    min-width: min(94vw, 500px);
+    min-width: min(88vw, 460px);
     padding: 0.5rem 0.75rem;
     gap: 0.15rem;
     bottom: calc(1rem + env(safe-area-inset-bottom));
@@ -913,7 +913,7 @@ body::after {
   .home-wrap { padding: 4.5rem 1rem 6rem; }
   .sec-wrap { padding: 4.5rem 1rem 6rem; }
   .bottom-nav {
-    min-width: min(96vw, 400px);
+    min-width: min(88vw, 370px);
     padding: 0.45rem 0.6rem;
     gap: 0.1rem;
   }
@@ -960,7 +960,7 @@ body::after {
   .tool-pill { padding: 0.4rem 0.8rem; font-size: 0.72rem; }
   .home-stat-pill { font-size: 0.7rem; padding: 0.45rem 0.8rem; }
   .bottom-nav {
-    min-width: min(97vw, 340px);
+    min-width: min(90vw, 310px);
     padding: 0.4rem 0.5rem;
     gap: 0.05rem;
   }
@@ -1056,7 +1056,7 @@ body::after {
   .social-link { width: 36px; height: 36px; font-size: 0.88rem; border-radius: 10px; }
 
   .bottom-nav {
-    min-width: min(98vw, 320px);
+    min-width: min(92vw, 295px);
     padding: 0.4rem 0.45rem;
     gap: 0.05rem;
   }
@@ -1070,7 +1070,7 @@ body::after {
   .nav { display: none; }
   .bottom-nav {
     display: flex;
-    min-width: min(90vw, 520px);
+    min-width: min(82vw, 480px);
     padding: 0.45rem 1rem;
     gap: 0.2rem;
     bottom: calc(0.8rem + env(safe-area-inset-bottom));

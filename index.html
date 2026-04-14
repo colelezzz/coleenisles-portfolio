@@ -18,6 +18,20 @@
 
 <body>
 
+  <div id="page-loader">
+    <svg class="loader-ring" viewBox="0 0 50 50">
+      <circle cx="25" cy="25" r="20" fill="none" stroke="rgba(124,58,237,0.15)" stroke-width="4" />
+      <circle cx="25" cy="25" r="20" fill="none" stroke="url(#loaderGrad)" stroke-width="4" stroke-linecap="round"
+        stroke-dasharray="80 45" />
+      <defs>
+        <linearGradient id="loaderGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+          <stop offset="0%" stop-color="#7c3aed" />
+          <stop offset="100%" stop-color="#a78bfa" />
+        </linearGradient>
+      </defs>
+    </svg>
+  </div>
+
   <canvas id="bg-canvas"></canvas>
   <canvas id="cursor-canvas"></canvas>
 

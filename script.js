@@ -39,7 +39,7 @@ for (let i = 0; i < 120; i++) particles.push(new Particle());
 const orbs = [
   { x: 0.15, y: 0.2, r: 320, col: '124,58,237', a: 0.09 },
   { x: 0.85, y: 0.7, r: 260, col: '244,114,182', a: 0.07 },
-  { x: 0.5, y: 0.5, r: 200, col: '167,139,250', a: 0.05 },
+  { x: 0.5,  y: 0.5, r: 200, col: '167,139,250', a: 0.05 },
 ];
 
 function drawConnections() {
@@ -97,7 +97,6 @@ window.addEventListener('mousemove', e => { mouseX = e.clientX; mouseY = e.clien
   let tIdx = 0;
   let colorT = 0;
 
-  // ── MINIMAL CLICK BURST ──
   const bursts = [];
 
   class BurstDot {
@@ -155,7 +154,6 @@ window.addEventListener('mousemove', e => { mouseX = e.clientX; mouseY = e.clien
     colorT = (Math.sin(Date.now() * 0.001) + 1) / 2;
     const col = lerpColor(colorT);
 
-    // update + draw minimal burst dots
     for (let i = bursts.length - 1; i >= 0; i--) {
       bursts[i].update();
       bursts[i].draw(cx);
@@ -231,6 +229,9 @@ function showSection(id) {
   if (id === 'services') { animateAchievements(); animateSkills(); }
   updateScrollBtn(id);
   window.scrollTo(0, 0);
+
+  // ── Save last visited section ──
+  localStorage.setItem('lastSection', id);
 }
 
 document.querySelectorAll('[data-id]').forEach(el => {
@@ -279,7 +280,6 @@ document.querySelectorAll('.port-filter-btn').forEach(btn => {
 });
 
 // ── EMAILJS SETUP ──
-
 const EMAILJS_PUBLIC_KEY = 'VIkQ22U3mSZvyunaz';
 const EMAILJS_SERVICE_ID = 'service_09xvphh';
 const EMAILJS_TEMPLATE_ID = 'template_osryicp';
@@ -298,7 +298,6 @@ document.getElementById('contactForm').addEventListener('submit', function (e) {
 
   if (!name || !email || !message) return;
 
-  // Guard: keys not yet configured
   if (EMAILJS_PUBLIC_KEY === 'YOUR_PUBLIC_KEY' || EMAILJS_SERVICE_ID === 'YOUR_SERVICE_ID' || EMAILJS_TEMPLATE_ID === 'YOUR_TEMPLATE_ID') {
     alert('Email form is not configured yet. Please follow the EmailJS setup steps in script.js.');
     return;
@@ -328,7 +327,6 @@ document.getElementById('contactForm').addEventListener('submit', function (e) {
 const scrollTopBtn = document.getElementById('scrollTop');
 
 function updateScrollBtn(id) {
-  // just trigger a scroll check whenever section changes
   setTimeout(() => {
     if (window.scrollY > 200) {
       scrollTopBtn.classList.add('show');
@@ -359,7 +357,6 @@ document.querySelectorAll('.skill-tab-btn').forEach(btn => {
     document.querySelectorAll('.skill-tab-panel').forEach(panel => {
       panel.classList.toggle('active', panel.dataset.group === group);
     });
-    // re-animate bars in active panel
     setTimeout(() => {
       document.querySelectorAll('.skill-tab-panel.active .skill-fill').forEach(bar => {
         bar.style.width = '0';
@@ -376,20 +373,27 @@ document.querySelectorAll('.faq-q').forEach(btn => {
     const answer = item.querySelector('.faq-a');
     const isOpen = item.classList.contains('open');
 
-    // Close all open items smoothly
     document.querySelectorAll('.faq-item.open').forEach(openItem => {
       const openAnswer = openItem.querySelector('.faq-a');
-      // Set explicit height before collapsing so transition has a start point
       openAnswer.style.maxHeight = openAnswer.scrollHeight + 'px';
-      openAnswer.getBoundingClientRect(); // force reflow
+      openAnswer.getBoundingClientRect();
       openAnswer.style.maxHeight = '0';
       openItem.classList.remove('open');
     });
 
-    // Open the clicked item if it was closed
     if (!isOpen) {
       item.classList.add('open');
       answer.style.maxHeight = answer.scrollHeight + 'px';
     }
   });
+});
+
+// ── RESTORE LAST SECTION + HIDE LOADER ON LOAD ──
+window.addEventListener('load', () => {
+  const savedSection = localStorage.getItem('lastSection');
+  showSection(savedSection || 'home');
+
+  setTimeout(() => {
+    document.getElementById('page-loader').classList.add('hidden');
+  }, 200);
 });

@@ -141,12 +141,15 @@ body::after {
   overflow: hidden;
 }
 .status-pill {
-  display: inline-flex; align-items: center; gap: 8px;
+  display: flex; align-items: center; gap: 8px;
   padding: 6px 16px; border-radius: 40px;
   background: rgba(124,58,237,0.1); border: 1px solid rgba(124,58,237,0.25);
   font-size: 0.7rem; letter-spacing: 0.15em; text-transform: uppercase;
   color: var(--violet-2); margin-bottom: 1.6rem;
   animation: fadeSlide 0.6s 0.1s both;
+  width: fit-content;
+  margin-left: auto;
+  margin-right: auto;
 }
 .status-dot {
   width: 7px; height: 7px; background: #4ade80; border-radius: 50%;
@@ -156,12 +159,13 @@ body::after {
 
 .home-name {
   font-family: 'DM Serif Display', serif;
-  font-size: clamp(2.4rem, 4.5vw, 4.4rem);
+  font-size: clamp(1.8rem, 3.2vw, 3.8rem);
   line-height: 1.08; letter-spacing: -0.02em; margin-bottom: 0.4rem;
   animation: fadeSlide 0.6s 0.2s both;
+  white-space: nowrap;
 }
 .home-name em {
-  font-style: italic; display: block;
+  font-style: italic; display: inline;
   background: linear-gradient(135deg, var(--violet-2), var(--rose));
   -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;
 }

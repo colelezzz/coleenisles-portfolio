@@ -57,7 +57,7 @@ portfolio/
     │   ├── portfolioLogo.png   ← Tab icon + nav logo
     │   └── image1.png          ← Profile photo
     └── files/
-        └── IslesCV.pdf         ← Downloadable CV
+        └── Isles_CV.pdf         ← Downloadable CV
 ```
 
 > **No frameworks. No build tools. No node_modules.** Just open `index.html` and go. 🚀

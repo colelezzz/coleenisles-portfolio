@@ -148,8 +148,6 @@ body::after {
   color: var(--violet-2); margin-bottom: 1.6rem;
   animation: fadeSlide 0.6s 0.1s both;
   width: fit-content;
-  margin-left: auto;
-  margin-right: auto;
 }
 .status-dot {
   width: 7px; height: 7px; background: #4ade80; border-radius: 50%;
@@ -914,6 +912,7 @@ body::after {
   .achieve-grid { grid-template-columns: 1fr; }
   .hobbies-grid { grid-template-columns: repeat(2, 1fr); }
   .scroll-top { bottom: calc(5.5rem + env(safe-area-inset-bottom)); right: 1rem; width: 46px; height: 46px; }
+  .status-pill { margin-left: auto; margin-right: auto;}
 }
 
 @media (max-width: 600px) {
